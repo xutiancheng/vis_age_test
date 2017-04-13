@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .imgContainer{
+    position: relative;
+  }
+  .rect{
+    position: absolute;
+    border: 1px solid #ff0000;
+  }
+  </style>
+</head>
+<body>
+
+<div class="imgContainer">
+  <img id="j-img" src="" >
+</div>
+<canvas id="canvas"></canvas>
+<script  src="./src/js/build/tracking-min.js"></script>
+<script  src="./src/js/build/data/eye-min.js"></script>
+<script  src="./src/js/build/data/mouth-min.js"></script>
+<script  src="./src/js/build/data/face-min.js"></script>
+<script>
+
+// function load(){
+//   var beauty = new Image();
+//   beauty.src = "./src/img/timg.jpg";
+//   if(beauty.complete){
+//      canvas.drawImage(beauty, 0, 0);
+//      console.log(2);
+//   }
+// }
+
+
+
+window.onload = function () {
+
+        var img = document.getElementById('j-img');
+        var canvasObj = document.getElementById('canvas');
+        canvasObj.width = 1000;
+        canvasObj.height = 600;
+        var canvas = canvasObj.getContext('2d');
+
+        load();
+
+        var tracker = new tracking.ObjectTracker(['eye','mouth','face']);
+//            tracker.setStepSize(1.7);
+        tracking.track('#j-img', tracker);
+        tracker.on('track', function (event) {
+          console.log(1);
+            if (event.data.length === 0) {
+                alert("无人脸")
+            } else {
+                event.data.forEach(function (rect,index) {
+//                        console.log(event)
+                    console.log(rect)
+                    // if(index < 1){
+                      draw(rect.x, rect.y, rect.width, rect.height);
+                    // }
+
+
+                });
+            }
+        });
+
+        function convertCanvasToImage(canvasObj) {
+        	// var image = new Image();
+        	// image.src = canvas.toDataURL("image/png");
+        	//return image;
+          document.getElementById("j-img").src = canvasObj.toDataURL();
+        }
+
+    		function load(){
+    			var beauty = new Image();
+    			beauty.src = "./src/img/timg.jpg";
+
+    			   beauty.onload = function(){
+    			     canvas.drawImage(beauty, 0,0);
+               convertCanvasToImage(canvasObj);
+    			   };
+    			   beauty.onerror = function(){
+    			     //window.alert('美女加载失败，请重试');
+    			   };
+
+    		}
+
+        //画方框
+        function draw(x, y, w, h) {
+            var rect = document.createElement('div');
+            document.querySelector('.imgContainer').appendChild(rect);
+            rect.classList.add('rect');
+            rect.style.width = w + 'px';
+            rect.style.height = h + 'px';
+            rect.style.left = (img.offsetLeft + x) + 'px';
+            rect.style.top = (img.offsetTop + y) + 'px';
+        };
+    };
+</script>
+</body>
+</html>

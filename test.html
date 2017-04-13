@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>test</title>
+
+    <style>
+    .imgContainer{
+        position: relative;
+    }
+    .rect{
+        position: absolute;
+        border: 1px solid #ff0000;
+    }
+  </style>
+</head>
+<body>
+	<video id="video" width="0" height="0" autoplay></video>
+    <div class="imgContainer">
+      <img id="j-img" src="" >
+    </div>
+	<canvas id="canvas" style="display:none;"></canvas>
+
+    <script  src="./src/js/build/tracking-min.js"></script>
+    <script  src="./src/js/build/data/eye-min.js"></script>
+    <script  src="./src/js/build/data/mouth-min.js"></script>
+    <script  src="./src/js/build/data/face-min.js"></script>
+	<script type="text/javascript">
+    var img = document.getElementById('j-img');
+	var video = document.getElementById('video');
+	navigator.myGetUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.myGetUserMedia({ video: true },function(localMediaStream){
+        /*并不是每个window都有URL对象,要加上浏览器前缀
+        **video.src=window.URL.createObjectURL(localMediaStream);
+        * */
+        window.URL=window.URL||window.webkitURL||window.mozURL||window.msURL;
+        video.src=window.URL.createObjectURL(localMediaStream);
+        video.play();
+    },function(error){});
+
+
+    var canvasObj = document.getElementById('canvas');
+
+    	canvasObj.width = 1000;
+    	canvasObj.height = 400;
+
+	var context1 = canvasObj.getContext('2d');
+
+    // context1.lineWidth = 4;
+    // context1.strokeStyle = '#ff0000';
+
+    // for(var i = 0;i<10;i++)
+    // {
+    // 	context1.beginPath();
+    // 	context1.arc(50+i*100,60,50,0,2*Math.PI*(i+1)/10);
+    // 	context1.closePath();
+    // 	context1.stroke();
+    // }	
+
+    //document.getElementById('snap').onclick = scamera;
+
+    setInterval(function(){scamera();},100)
+
+    function scamera() {
+
+        var videoElement = document.getElementById('video');
+        // var canvasObj = document.getElementById('canvas');
+        // var context1 = canvasObj.getContext('2d');
+        //context1.fillStyle = "#ffffff";
+        //context1.fillRect(0, 0, 320, 240);
+        context1.fillStyle="#ffffff";  
+        context1.beginPath();  
+        context1.fillRect(0,0,1000,400);  
+        context1.closePath();  
+        //context1.globalCompositeOperation="destination-over";
+        context1.drawImage(videoElement, 0, 0, 320, 240);
+
+                //load();
+        document.getElementById("j-img").src = canvasObj.toDataURL();
+                //alert("PaiZhaoSuccess");
+            if(document.getElementById("j-img").width){
+                var tracker = new tracking.ObjectTracker(['eye']);
+                //  tracker.setStepSize(1.7);
+                tracking.track('#j-img', tracker);
+                tracker.on('track', function (event) {
+                  //console.log(1);
+                    if (event.data.length === 0) {
+                        //alert("无人脸")
+                        //console.log('无脸');
+                    } else {
+                    var list = document.querySelectorAll('.rect');
+
+                    //var list = document.getElementsByTagName('div')[0].getElementsByTagName('div');
+
+                    for (var i = 0; i < list.length; i++) {
+                        document.getElementsByTagName('div')[0].removeChild(list[i]);
+                    }
+                        event.data.forEach(function (rect,index) {
+                            //console.log(event)
+                            //console.log(rect)
+                            // if(index < 1){
+                              draw(rect.x, rect.y, rect.width, rect.height);
+                            // }
+
+
+                        });
+                    }
+                });
+            }
+        }
+
+		function drawBeauty(beauty){
+			// var mycv = document.getElementById("cv");  
+			// var myctx = mycv.getContext("2d");
+			//context1.globalCompositeOperation="destination-over";
+            var x = Math.round(Math.random()*100);
+			context1.drawImage(beauty, x, x);
+		}
+
+		function load(){
+			var beauty = new Image();  
+			beauty.src = "https://sfault-avatar.b0.upaiyun.com/413/036/413036868-58c3676bcd47e_big64"; 
+			if(beauty.complete){
+			   drawBeauty(beauty);
+			}else{
+			   beauty.onload = function(){
+			     drawBeauty(beauty);
+			   };
+			   beauty.onerror = function(){
+			     window.alert('美女加载失败，请重试');
+			   };
+			};   
+		}//load
+
+        //画方框
+        function draw(x, y, w, h) {
+            var rect = document.createElement('div');
+            document.querySelector('.imgContainer').appendChild(rect);
+            rect.classList.add('rect');
+            rect.style.width = w + 'px';
+            rect.style.height = h + 'px';
+            rect.style.left = (img.offsetLeft + x) + 'px';
+            rect.style.top = (img.offsetTop + y) + 'px';
+        };
+	</script>
+</body>
+</html>

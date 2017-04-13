@@ -1,0 +1,1160 @@
+﻿<html>
+<head>
+<title>Sephora Virtual Artist | Try On Makeup Virtually | Sephora</title>
+<meta name="description" content="Instantly try thousands of lipstick shades, eyeshadows and false lashes with Sephora Virtual Artist! Try, shop and share unique looks created by Sephora experts.">
+
+<style>
+hov:hover {
+	text-decoration:underline;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://sephoravirtualartist.com/sstyle.css" />
+<link rel="stylesheet" type="text/css" href="https://sephoravirtualartist.com/sstyle_v2.css" />
+<link rel="stylesheet" type="text/css" href="https://sephoravirtualartist.com/sephora-coutnry-switch.css" />
+<link rel="stylesheet" type="text/css" href="https://sephoravirtualartist.com/pto_3.0.css?2" />
+
+<!-- JPEGCam JavaScript Library -->
+<script type="text/javascript" src="https://sephoravirtualartist.com/webcam.js"></script>
+<script language="JavaScript">
+/*
+webcam_photo.set_api_url( 'registerwebcam.php' );
+webcam_photo.set_quality( 100 ); // JPEG quality (1 - 100)
+webcam_photo.set_shutter_sound( true ); // play shutter click sound
+webcam_photo.set_stealth( true );
+webcam_photo.scaleX=-1;
+*/
+</script>
+
+<script type="text/javascript" src="https://sephoravirtualartist.com/is.js"></script>
+<script type="text/javascript" src="https://sephoravirtualartist.com/VisitorAPI.js"></script>
+<script type="text/javascript" src="https://sephoravirtualartist.com/adobetracking.js?5"></script>
+
+<script src="https://sephoravirtualartist.com/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="https://sephoravirtualartist.com/json2.js"></script>
+<script type="text/javascript" src="https://ecommerce.modiface.com/mf_face_live/mflive.js"></script>
+<script type="text/javascript" src="https://sephoravirtualartist.com/common.js"></script>
+<script type="text/javascript" src="https://sephoravirtualartist.com/pto_3.0.js"></script>
+
+
+
+<script>
+
+var page = "pto";
+
+var enTxt = JSON.parse('[\"Highlighting\",\"Select your highlighting intensity\",\"Select Your Skin Tone\",\"Light\",\"Medium\",\"Medium-Tan\",\"Deep\",\"Start with a flawless base. Moisturize, prime and apply foundation as usual.\",\"For glowing skin all over, exfoliate followed by a peel 1x a week\",\"Highlight highest point of the cheekbones. Apply from beneath the outer-third of eye.\",\"If using creamy or wet products, highlight after applying cheek products for the best end result and longest wear.\",\"Blend upwards in a \'C\' motion to create a halo effect.\",\"Don\'t go past the brow for a natural highlight.\",\"Using a precision brush, apply a sheer amount of highlighter to bridge of nose.\",\"Adding highlighter to any area of the face brings it forward. Don\'t want to bring out your nose? Skip this step!\",\"Apply a dab of highlighter to the cupid\'s bow.\",\"A little goes a long way. Avoid applying any higher than the cupid\'s bow or you could end up with more reflection than intended.\",\"Apply just below the arch of the brow and inner corners of the eye.\",\"For a more concentrated application, use a small, firm brush. For a softer application, try a small to medium fluffy brush.\",\"Apply powder in between the brows, around the nose and mouth, and on the chin.\",\"Try using a loose translucent powder to create a natural matte finish where needed.\",\"Recommended Products\",\"My Highlighting Look\",\"Email this Look\",\"Send this tutorial and the products you\'re wearing.\",\"Email Products\",\"Brow 3 Ways\",\"Your Brow Color Is:\",\"Light Brown\",\"Select a product 1-2 shades deeper than natural hair color.\",\"Blonde\",\"Choose a product that is 1-2 shades deeper than the lowlights along the nape of your neck.\",\"Dark Brown\",\"Select a product that is 1-2 shades lighter than natural hair color.\",\"Black\",\"Pick a product that is 1-2 shades lighter than your hair - the deeper the skin, the richer the shade.\",\"Auburn\",\"Opt for a product that is 1-2 shades deeper than your hair. Stick to warm, brown tones.\",\"Apply eye primer through the brow and on brow bone to keep product in place.\",\"Pro Tip\",\"You can use your finger to apply and push the primer through the brows to ensure the product sticks evenly.\",\"Hold pencil from the nostril to the inner corner of the eye and lightly mark.\",\"Avoid making the mark too dark so that you don\'t have to blend it down later. Hold pencil at the center of the nostril for a balanced outcome.\",\"Looking straight, hold pencil from the nostril to the iris and lightly mark.\",\"The wider your face is, the sharper you can accentuate the arch.\",\"Hold pencil from the nostril to the outer corner of the eye and lightly mark.\",\"The narrower your face is, the longer you can extend your brow.\",\"Using the marks as a guide, lightly sketch in your desired brow shape.\",\"Use a clean spoolie to comb through and soften your brows.\",\"Use a brow gel, pomade or wax to keep hairs in place.\",\"Brush brow hairs in the directon that they naturally grow in.\",\"Pluck any stray hairs. Highlight browbone at the arch. Blend out.\",\"Choose a highlighter or concealer that is 1-2 shades lighter than your skin.\",\"Polished\",\"Natural\",\"Bold\",\"Contouring\",\"Find Your Face Shape\",\"Oval\",\"Your face shape is slightly longer than it is wide. It\'s symmetrical with a rounded jaw.\",\"Heart\",\"Your face shape is widest at the forehead and narrowest at the jawline and chin is pointed.\",\"Square\",\"Your face shape is more angular. The length and width of your face are equal.\",\"Round\",\"Your face shape is equal in width and length with a rounded chin and jawline.\",\"Moisturizer\",\"Foundation\",\"Powder, cream or stick\",\"Contour brush or sponge\",\"Setting spray or powder\",\"for personalized product recommendations\",\"The color closest to your lash line should be the darkest and most saturated. Neutral colors used in blending will help soften the edges.\",\"Less is more. Take a step back often in-between steps to assess the level of intensity and ensure your look is balanced.\",\"To define your eye contour, use an angled brush with a darker shadow and trace just above the eye socket. Then continue to build.\",\"To get different intensities out of one shade, use different tools. For instance, use a small firm brush to create a concentrated color. Use a fluffy brush to create a sheer wash of color.\",\"Highlight your eyeliner by downplaying your shadow. Eye shadow should be used to create depth, not an entire smoky eye.\",\"Make sure the undertone of your lip and cheek are coordinated. For instance, if your lipstick has orange undertones then your blush should also have orange undertones.\",\"Start your makeup routine with your lips. This may feel out of order but it will stop you from overdoing the rest of your look.\",\"Bright Lip & Cheek\",\"Dramatic Lip\",\"Cut Crease\",\"Everyday Eye\",\"Impactful Eye\",\"Night Out\",\"No-makeup makeup\",\"Smoky Eye\",\"Color Family\",\"Choose a Shade\",\"Lip\",\"Lash\",\"Shadow\",\"Lid\",\"Crease\",\"Outer Corner\",\"What You\'re Wearing\",\"Shop\",\"Share\",\"Surprise Me\",\"Just Arrived\",\"Bestsellers\",\"Share Your Look!\",\"Use a photo to start\",\"Shop the Look\",\"Refine\",\"Live\",\"Photo\",\"Palette\",\"brown\",\"purple\",\"black\",\"pink\",\"beige\",\"metallic\",\"blue\",\"grey\",\"green\",\"yellow\",\"coral\",\"white\",\"red\",\"Filter Lip\",\"Filter Lash\",\"Filter Shadow\",\"Find a Shade\",\"Find a lash\",\"Add another look\",\"Clear All\",\"Take a Photo\",\"Choose a Photo\",\"Choose a Photo to Start\",\"Download the Sephora app for the best 3D experience\",\"Shade Name\",\"Lash Style\",\"Learn how to recreate the top trends at home and star in your own tutorial video\",\"What You\'ll Need\",\"Virtual Tutorials\",\"Share Your Photo\",\"Share Your Video\",\"Check out my beauty tutorial and create one of your own!\",\"#VirtualArtist\",\"#InstaMakeover\",\"Before & After\",\"Menu\",\"View Pro Tip\",\"Hide Pro Tip\",\"Try Another Tutorial\",\"Share\",\"You\'re Finished!\",\"Now share your transformation with friends\",\"Shop Now\",\"Shop\",\"Nighttime Smoky Eye\",\"Eye cream\",\"Primer\",\"Blendable eyeliner\",\"Deep-Colored Eyeshadow\",\"Shadow brush\",\"Medium-Colored Eyeshadow\",\"Blending brush\",\"Mascara\",\"Virtual Artist\",\"Customize Color\",\"Purple\",\"Gray\",\"Black\",\"Brown\",\"Sharpen your smoky eyes skills for a smoldering look that will keep all eyes on you.\",\"Using your finger, pat eye cream along the brow bone and under-eye areas.\",\"Apply from lash lines to brow bones to keep shadow from smudging.\",\"Line top and bottom lash lines with a creamy eye pencil. Smudge with brush.\",\"Place eye shadow over liner, blending up toward the crease and lower lashline.\",\"Apply a lighter shade and blend inward to soften.\",\"Curl lashes and finish with two to three coats of black mascara.\",\"Prep\",\"Pro Tip\",\"Wait at least 1 minute for your eye cream to absorb before you move on to the next step. This will prevent your makeup from moving around or caking.\",\"Prime\",\"Line\",\"Shadow\",\"Blend\",\"Finish\",\"Eyeliners\",\"For seamless, stay-put shadow, make sure primer is applied evenly over lids.\",\"For the best results, use short back-and-forth strokes when applying liner and when blending.\",\"For a long-lasting look, pat shadow on using a brush versus sweeping it across the lids.\",\"Blend using small, circular motions until you\'ve achieved an ombre effect. Over-blending will cause the color to fade.\",\"Wiggle the mascara wand slightly at your roots for a fuller-looking lash.\",\"Best for copy\",\"Eyeliner 3 Ways\",\"Winged\",\"Natural\",\"Smoky\",\"Prep\",\"Pat eye cream along the browbones and under-eye areas. Let it fully absorb.\",\"Prime\",\"Apply primer with a finger on the lid and into the lower lash line.\",\"Build\",\"Sweep a neutral color across the lid and a deeper color through the crease\",\"Line\",\"Wiggle liner into the lash roots. Follow the natural curve of your lash line.\",\"Retrace\",\"Retrace with the same liner, this time just above your lashes.\",\"Sketch\",\"Build up the line by sketching along the upper and lower lash lines.\",\"Angle\",\"Blend\",\"Blend the edges with a smudge brush moving from the outer to the inner corner\",\"Fill\",\"Connect the tails to the center of your lid to form a triangle. Fill in the shape.\",\"Finish\",\"Tilt your head back and angle liner slightly past the outer corners of your eye.\",\"Layer liner from the wing to the inner corner of the eye. Finish with mascara.\",\"Dust with shadow to keep liner in place and soften edges. Finish with mascara.\",\"Eye Cream\",\"Primer\",\"Neutral Eyeshadow\",\"Pencil Eyeliner\",\"Gel\",\"Pen Eyeliner\",\"Mascara\",\"Product Try-On\",\"Try on make up instantly\",\"Use a photo\",\"Use a photo to start\",\"Get the app\",\"TRY CLOSED MOUTH\",\"TRY OPEN MOUTH\",\"Looks good\",\"Refine outline\",\"How does the placement look?\",\"Filter\",\"Lip shades\",\"Category\",\"Color IQ\",\"Find a shade\",\"No results found\",\"Edit your filter selections and try again\",\"Want to get your Color IQ #?\",\"Visit a store to  discover your perfect lip, concealer or foundation matches\",\"Invalid Color IQ\",\"Please try again\",\"Apply\",\"Cancel\",\"Lash\",\"Lip\",\"Find a lash\",\"Surprise\",\"Share\",\"Retake\",\"Add Lip\",\"Add Lash\",\"Learn the essentials of eyeliner to define your eyes for any mood or occasion.\",\"Press delicately into the under-eye area with three fingers. Do not stretch or pull the skin.\",\"Less is more when it comes to primer. A small dot of product on each eyelid is plenty.\",\"Highlight the center of the lids & brow bones with a light neutral or shimmery shadow to make the liner pop.\",\"Tilt head back while applying to allow the lid to be more visible during self-application.\\"\",\"For more stability, rest your elbow on a countertop to steady your hand.\",\"Use your brow as a guide: the tip of your wing should line up with the end of your brow.\",\"Try starting with a small wing since you can always add length afterwards. Adding is easier than taking away.\",\"Blend wing into liner with short strokes to close any gaps.\",\"Use a shadow with some shimmer to add some fun dimension!\\"\",\"\\"If layering, apply slightly more pigment to the look than desired as some will be lost in blending.\",\"Start with a small amount and add intensity as desired. You\u2019ll be surprised by how little you\u2019ll need to achieve your look. Use a cotton swab and a dab of face oil to easily clean up any messy lines\",\"Best For\",\"All Skin Types\",\"Hydrating and Anti-aging\",\"De-Puffing\",\"Long-Lasting Crease-Free Wear\",\"Creating A Smooth Base\",\"All Day Wear and Humiditiy Resistance\",\"Budge-Proof Finish\",\"Intense Color Payoff\",\"All-In-One\",\"Brush-Like Precision\",\"Ease of Use\",\"Precise Application\",\"Advanced Precise Application\",\"An Ultra-Black False Lash Look\",\"Lengthening & Defintiion\",\"Precision Volume & Curl\",\"De-Puffing And Brightening\",\"All Skin Types And Anti-Aging Concerns\",\"Long-Lasting And Seamless Wear\",\"Metallic Shadow and Glitter Application\",\"Creamy Application\",\"Long-Lasting Wear\",\"On-The-Go Application\",\"Intense Pigment Payoff & Concentrated Application\",\"Priming & Long-Lasting Wear\",\"Precision & Sheer Finish\",\"Even Application\",\"Smudging\",\"Matte Finish\",\"Dramatic Definition\",\"Easy Application\",\"Buildable Volume and Dramatic Curl\",\"Lash Defintiion and Length\",\"Intensity Control\",\"Intense Color And Buildable Volume\",\"Intense Color\",\"Wet or Dry Application\",\"Impactful High Pigment Color\",\"Wet Or Dry Application\",\"Dramatic Definition\",\"Intensity Control\",\"Blending and Long-Lasting Wear\",\"Eye Creams\",\"Primers\",\"Eyeliners\",\"Deep-Colored Eyeshadow\",\"Shadow Brushes\",\"Medium-Coloured Eyeshadow\",\"Blending Brushes\",\"Mascara\",\"A Budge-Proof Finish\",\"Wet Or Dy Application and Build Ability\",\"Instant Color Payoff\",\"Long-Lasting Crease-Free Wear\",\"Blending\",\"Targeted Crease Appication\",\"Accuracy\",\"Shading\",\"Dual Purpose\",\"Precision\",\"All Day Wear\",\"You\'re Finished\",\"Share Your Transformation\",\"Split view\",\"Smudging Brushes\",\"Choose a look\",\"START TUTORIAL\",\"Place eyeshadow over liner, blending up toward the crease and lower lashline.\",\"Back to top\",\"Download the Sephora to Go app for iPhone for the best 3D experience\",\"get the app\",\"Download\",\"Shade Name\",\"Lash Name\",\"Mascara\",\"Eyeliner\",\"Smudge Brush\",\"Gel or Pen Eyeliner\",\"Get the best 3D LIVE experience on the Sephora app\",\"Looks\",\"Change Your Photo\",\"Cheek\",\"Eye\",\"Customize Your Look\",\"COMPARE\",\"NEW PHOTO\",\"Choose a Lash\",\"BACK\",\"Compare lip, lash, and shadow combinations and share them with friends!\",\"Camera Detected!\",\"You\'re good to go!\",\"Click on \\"Allow\\" on the next page for live try-on.\",\"got it\",\"1. Move the dots to edit the outline of your lips.\",\"RESET\",\"Take a New Photo\",\"RESULTS\",\"BRAND\",\"my color IQ\",\"MY FAVORITES\",\"no webcam device has been found\",\"SINGLE SHADES\",\"glimmer\",\"shimmer\",\"satin\",\"try the web version\",\"learn more\",\"berry\",\"nude\",\"universal\",\"unconventional\",\"Why You\'ll &nbsp &nbsp &nbsp &nbsp It\",\"Instantly try on lip shades, eyeshadow, and false lashes.\",\"Get inspired and try looks created by Sephora experts.\",\"Learn new techniques and star in your own video tutorial.\",\"Bright Lip & Cheek\",\"Winged Liner & Red Lip\",\"Smoky Eye\",\"Cut Crease\",\"Neutral Lip & Bright Eyes\",\"Dark Dramatic Lip\",\"Everyday Eye\",\"Choose a New Photo\",\"For best results, be in a well-lit room and use a high-resolution camera. Face the camera directly and keep hair away from your face.\",\"Filter by Color IQ results\",\"Refine Photo\",\"Take a New Photo\",\"Select a lip\",\"Select a lash\",\"select a shadow\"]');
+var frTxt = JSON.parse('[\"Effet lumi\u00e8re\",\"S\u00e9lectionnez l\u2019intensit\u00e9 du maquillage effet lumi\u00e8re\",\"S\u00e9lectionnez votre teint\",\"Clair\",\"Moyen\",\"Moyen bronz\u00e9\",\"Fonc\u00e9\",\"Commencez par une base impeccable. Hydratez et pr\u00e9parez la peau, puis appliquer le fond de teint comme d\u2019habitude.\",\"Pour un teint totalement \u00e9clatant, exfoliez la peau puis proc\u00e9dez \u00e0 un gommage une fois par semaine\",\"Illuminez la zone la plus saillante des pommettes. Appliquez \u00e0 partir de la zone sous le tiers externe de l\u2019\u0153il.\",\"Si vous employez des produits cr\u00e9meux ou liquides, illuminez seulement apr\u00e8s avoir appliqu\u00e9 les produits pour les pommettes afin de garantir les meilleurs r\u00e9sultats et une tenue optimale.\",\"Estompez vers le haut en faisant des mouvements en \u00ab\u00a0C\u00a0\u00bb afin de cr\u00e9er l\u2019effet halo.\",\"Pour un effet lumi\u00e8re naturel, ne d\u00e9passez pas les sourcils.\",\"\u00c0 l\u2019aide d\u2019un pinceau pr\u00e9cision, appliquez une petite quantit\u00e9 d\u2019enlumineur sur l\u2019arr\u00eate du nez.\",\"Toutes les zones du visage sur lesquelles vous appliquerez l\u2019enlumineur seront accentu\u00e9es. Vous ne souhaitez pas mettre votre nez en valeur\u2009? Sautez cette \u00e9tape\u2009!\",\"Appliquez une touche d\u2019enlumineur sur l\u2019arc de Cupidon.\",\"Une petite quantit\u00e9 suffit. \u00c9vitez d\u2019appliquer l\u2019enlumineur au-dessus de l\u2019arc de Cupidon. Vous pourriez obtenir plus de reflets que d\u00e9sir\u00e9.\",\"Appliquez juste en dessous de l\u2019arcade sourcili\u00e8re et sur les coins internes des yeux.\",\"Pour une application plus concentr\u00e9e, utilisez un petit pinceau rigide. Pour une application plus diffus\u00e9e, essayez un petit ou moyen pinceau souple.\",\"Appliquez la poudre entre les sourcils, autour du nez et de la bouche et sur le menton.\",\"Essayez une poudre libre translucide pour cr\u00e9er un fini mat naturel au besoin.\",\"Produits recommand\u00e9s\",\"Mon look effet lumi\u00e8re\",\"Envoyez ce look par courriel\",\"Envoyez ce tutoriel et les produits que vous affichez.\",\"Envoyez ces produits par courriel\",\"Sourcils en trois fa\u00e7ons\",\"Votre couleur de sourcils est\u00a0:\",\"Marron clair\",\"Choisissez un produit plus fonc\u00e9 d\u2019une ou deux teintes que votre couleur de cheveux naturelle.\",\"Blond\",\"Choisissez un produit plus fonc\u00e9 d\u2019une ou deux teintes que les tons les moins p\u00e2les de votre nuque.\",\"Marron fonc\u00e9\",\"Choisissez un produit plus clair d\u2019une ou deux teintes que votre couleur de cheveux naturelle.\",\"Noir\",\"Choisissez un produit plus clair d\u2019une ou deux teintes que votre couleur de cheveux. Plus votre peau est fonc\u00e9e, plus la teinte devrait \u00eatre riche.\",\"Auburn\",\"Choisissez un produit plus fonc\u00e9 d\u2019une ou deux teintes que votre couleur de cheveux. Limitez-vous aux tons de marron.\",\"Pour une tenue optimale, appliquez une base pour les yeux sur les sourcils et l\u2019arcade sourcili\u00e8re.\",\"Conseil de pro\",\"Vous pouvez utiliser vos doigts pour appliquer et bien faire p\u00e9n\u00e9trer la base.\",\"Tenez votre crayon de la narine au coin int\u00e9rieur de l\u2019\u0153il et appliquez l\u00e9g\u00e8rement.\",\"\u00c9vitez de faire une marque trop fonc\u00e9e afin de ne pas devoir l\u2019estomper plus tard. Placez votre crayon au centre de la narine pour un fini \u00e9quilibr\u00e9.\",\"En regardant droit devant, placez votre crayon de la narine \u00e0 l\u2019iris et appliquez l\u00e9g\u00e8rement.\",\"Plus votre visage est large, plus vous pourrez accentuer les angles.\",\"Placez votre crayon de la narine au coin ext\u00e9rieur de l\u2019\u0153il et appliquez l\u00e9g\u00e8rement.\",\"Plus votre visage est long, plus vous pourrez allonger vos sourcils.\",\"En aidant des marques pour vous guider, tracez l\u00e9g\u00e8rement la forme de sourcils d\u00e9sir\u00e9e.\",\"Utilisez une brosse en spirale propre afin de peigner vos sourcils.\",\"Utilisez un gel pour sourcils en pommade ou en cire afin de garder vos sourcils en place.\",\"Peignez vos sourcils dans le sens de la pousse.\",\"\u00c9pilez les poils rebelles. Appliquer un illuminateur sur l\u2019arcade sourcili\u00e8re et sur l\u2019arc du sourcil. Estompez.\",\"Choisissez un illuminateur ou un fond de teint qui est 1 \u00e0 2\u00a0teintes plus claires que votre peau.\",\"Gommer\",\"Naturel\",\"Audacieux\",\"Effet contour\",\"Trouvez la forme de votre visage\",\"Ovale\",\"La longueur de votre visage d\u00e9passe l\u00e9g\u00e8rement la largeur de votre visage. Il est sym\u00e9trique et votre m\u00e2choire est arrondie.\",\"C\u0153ur\",\"Votre visage est large au niveau du front, s\u2019amincit graduellement jusqu\u2019\u00e0 la m\u00e2choire et votre menton est pointu.\",\"Carr\u00e9\",\"Votre visage est angulaire. La longueur et la largeur de votre visage sont \u00e9gales.\",\"Rond\",\"Votre visage est \u00e9gal en longueur et en largeur. Votre m\u00e2choire et votre menton sont arrondis.\",\"Hydratant\",\"Fond de teint\",\"Poudre, cr\u00e8me ou b\u00e2ton\",\"Pinceau ou \u00e9ponge contour visage\",\"Vaporisateur ou poudre de finition\",\"des recommandations de produits personnalis\u00e9es\",\"La couleur la plus fonc\u00e9e et la plus satur\u00e9e devra \u00eatre utilis\u00e9e pr\u00e8s de vos cils. Les couleurs plus neutres utilis\u00e9es pour estomper vous aideront \u00e0 adoucir les angles.\",\"Il vaut mieux en mettre pas assez que trop. N\u2019h\u00e9sitez pas \u00e0 vous arr\u00eater souvent entre les \u00e9tapes afin d\u2019\u00e9valuer le niveau d\u2019intensit\u00e9 et v\u00e9rifier si votre look est \u00e9quilibr\u00e9.\",\"Afin de d\u00e9finir le contour de vos yeux, utilisez un pinceau en biseau avec un fard \u00e0 paupi\u00e8res fonc\u00e9 et appliquez juste au-dessus de l\u2019orbite de l\u2019\u0153il. Ensuite, continuez l\u2019application.\",\"Afin d\u2019obtenir diff\u00e9rentes intensit\u00e9s d\u2019un m\u00eame ton, utilisez des outils diff\u00e9rents. Par exemple, utilisez un pinceau fin et ferme pour cr\u00e9er une couleur intense. Utilisez un pinceau a\u00e9rien afin de cr\u00e9er une couleur l\u00e9g\u00e8re.\",\"Mettez en valeur votre ligneur en appliquant votre fard \u00e0 paupi\u00e8res de fa\u00e7on tr\u00e8s l\u00e9g\u00e8re. Le fard \u00e0 paupi\u00e8res sera utilis\u00e9 pour cr\u00e9er de la profondeur uniquement et non un look yeux charbonneux.\",\"Assurez-vous que la nuance de base de vos l\u00e8vres et de vos pommettes est coordonn\u00e9e. Par exemple, si votre rouge \u00e0 l\u00e8vres \u00e0 une nuance de base orang\u00e9e, votre fard \u00e0 joues doit aussi avoir une nuance de base orang\u00e9e.\",\"Commencez votre rituel maquillage par les l\u00e8vres. Cela peut para\u00eetre \u00e9trange, mais cela vous \u00e9vitera de trop en faire avec le reste de votre look.\",\"L\u00e8vres et joues scintillantes\",\"L\u00e8vres sublimes\",\"Coupez le pli\",\"Yeux de tous les jours\",\"Yeux percutants\",\"Soir\u00e9e\",\"Maquillage sans maquillage\",\"Yeux charbonneux\",\"Famille de couleur\",\"Choisissez une teinte\",\"L\u00e8vre\",\"Cil\",\"Fard\",\"Paupi\u00e8re\",\"Pli\",\"Coin externe\",\"Ce que vous portez\",\"Magasinez\",\"Partagez\",\"Surprenez-moi\",\"Tout nouveaux\",\"Produits les plus vendus\",\"Partagez votre look\",\"Utilisez une photo pour commencer\",\"Magasinez pour obtenir ce look\",\"Affinez\",\"En direct\",\"Photo\",\"Palette\",\"marron\",\"violet\",\"noir\",\"rose\",\"beige\",\"m\u00e9tallique\",\"bleu\",\"gris\",\"vert\",\"jaune\",\"corail\",\"blanc\",\"rouge\",\"Filtre l\u00e8vre\",\"Filtre cil\",\"Filtre fard\",\"Trouvez une teinte\",\"Trouvez des cils\",\"Ajoutez un autre look\",\"Tout effacer\",\"Prendre une photo\",\"Choisir une photo\",\"Choisir une photo pour commencer\",\"T\u00e9l\u00e9charger l\u2019application Sephora pour vivre la meilleure exp\u00e9rience 3D\",\"Nom de la teinte\",\"Style des cils\",\"Apprenez \u00e0 recr\u00e9er les tendances en vogue \u00e0 la maison et devenez la vedette de votre propre tutoriel vid\u00e9o\",\"Ce dont vous aurez besoin\",\"Le\u00e7ons virtuelles\",\"Partager votre photo\",\"Partager votre vid\u00e9o\",\"D\u00e9couvrez ma le\u00e7on beaut\u00e9 et cr\u00e9ez votre propre allure!\",\"#VirtualArtist\",\"#InstaMakeover\",\"Avant et apr\u00e8s\",\"Menu\",\"Voir le conseil de pro\",\"Masquer le conseil de pro\",\"Faire une autre le\u00e7on\",\"Partager\",\"Vous avez termin\u00e9!\",\"Partager votre transformation maintenant avec vos amis\",\"Magasiner maintenant\",\"Magasiner\",\"Yeux charbonneux de soir\u00e9e\",\"Cr\u00e8me contour des yeux\",\"Base\",\"Crayon pour les yeux \u00e0 estomper\",\"Fard \u00e0 paupi\u00e8res fonc\u00e9\",\"Pinceau \u00e0 fard\",\"Fard \u00e0 paupi\u00e8res de ton moyen\",\"Pinceau estompeur\",\"Mascara\",\"Virtual Artist\",\"Personnaliser la couleur\",\"Violet\",\"Gris\",\"Noir\",\"Brun\",\"Peaufinez votre technique de maquillage des yeux charbonneux pour vous cr\u00e9er une allure sulfureuse qui d\u00e9tournera tous les regards.\",\"\u00c0 l\u2019aide du doigt, tapotez d\u00e9licatement la cr\u00e8me contour des yeux le long de l\u2019arcade sourcili\u00e8re et sous les yeux.\",\"Appliquez la base de la ligne des cils \u00e0 l\u2019arcade sourcili\u00e8re pour permettre \u00e0 l\u2019ombre \u00e0 paupi\u00e8res de rester bien en place.\",\"Tracez une ligne le long des cils du haut et du bas \u00e0 l\u2019aide d\u2019un crayon pour les yeux cr\u00e9meux. Estompez la ligne avec le pinceau.\",\"Appliquez le fard \u00e0 paupi\u00e8res par-dessus le trait de crayon pour les yeux en l\u2019estompant vers le creux de la paupi\u00e8re et la ligne des cils du bas.\",\"Appliquez une teinte plus claire et estompez-la vers l\u2019int\u00e9rieur pour adoucir l\u2019effet.\",\"Recourbez les cils et, pour finir, appliquez deux \u00e0 trois couches de mascara noir.\",\"Pr\u00e9paration\",\"Conseil de pro\",\"Apr\u00e8s avoir appliqu\u00e9 votre cr\u00e8me contour des yeux, laissez la peau l\u2019absorber durant au moins une minute avant de passer \u00e0 la prochaine \u00e9tape. Ainsi, votre maquillage tiendra bien en place, sans plaquer.\",\"Appliquer la base\",\"Tracer\",\"Fard \u00e0 paupi\u00e8res\",\"Estomper\",\"Finition\",\"Crayons et ligneurs\",\"Pour bien faire tenir votre fard \u00e0 paupi\u00e8res, assurez-vous d\u2019appliquer la base uniform\u00e9ment sur toute la paupi\u00e8re.\",\"Pour obtenir un beau trait, appliquez le crayon pour les yeux par petits traits courts, dans un petit mouvement de va-et-vient, et estompez-le de la m\u00eame fa\u00e7on.\",\"Le fait d\u2019appliquer le fard en le tapotant sur la paupi\u00e8re \u00e0 l\u2019aide d\u2019un pinceau plut\u00f4t qu\u2019en l\u2019appliquant d\u2019un trait sur toute la paupi\u00e8re vous permettra de prolonger sa tenue.\",\"Estompez les couleurs au pinceau en faisant de petits mouvements circulaires jusqu\u2019\u00e0 l\u2019obtention d\u2019un effet ombr\u00e9. Toutefois, attention de ne pas trop estomper les fards pour \u00e9viter d\u2019affadir les couleurs.\",\"Remuez l\u2019applicateur de mascara d\u00e9licatement \u00e0 la racine des cils afin de conf\u00e9rer du volume aux cils.\",\"Best for copy\",\"Crayon pour les yeux de trois fa\u00e7ons\",\"Effet ail\u00e9\",\"Naturel\",\"Charbonneux\",\"Pr\u00e9paration\",\"Tapotez d\u00e9licatement la cr\u00e8me contour des yeux le long de l\u2019arcade sourcili\u00e8re et sous l\u2019oeil. Laissez la cr\u00e8me p\u00e9n\u00e9trer la peau.\",\"Application de la base\",\"Appliquez la base \u00e0 l\u2019aide du doigt sur la paupi\u00e8re, jusqu\u2019\u00e0 la ligne des cils du bas.\",\"Perfectionner\",\"D\u00e9posez une couleur neutre sur toute la paupi\u00e8re et une couleur plus fonc\u00e9e dans le creux de la paupi\u00e8re.\",\"Tracer\",\"Appliquez le ligneur en petits mouvements de va-et-vient le long de la racine des cils. Suivez la courbe naturelle de votre ligne des cils.\",\"Retracer\",\"Redessinez le trait \u00e0 l\u2019aide du m\u00eame ligneur, juste au dessus des cils.\",\"Dessiner\",\"Amplifiez la ligne en formant de petits traits le long des cils du haut et du bas.\",\"Angle\",\"Estomper\",\"Estomper les extr\u00e9mit\u00e9s \u00e0 l\u2019aide d\u2019un pinceau estompeur, du coin ext\u00e9rieur vers le coin int\u00e9rieur.\",\"Remplir\",\"Lier l\u2019extr\u00e9mit\u00e9 du trait au centre de la paupi\u00e8re de mani\u00e8re \u00e0 former un triangle. Remplissez l\u2019int\u00e9rieur du triangle.\",\"Finition\",\"Penchez la t\u00eate vers l\u2019arri\u00e8re et formez un trait de ligneur en biseau de mani\u00e8re \u00e0 d\u00e9passer l\u00e9g\u00e8rement le coin ext\u00e9rieur de l\u2019oeil.\",\"Tracez un trait au ligneur de l\u2019aile au coin int\u00e9rieur de l\u2019oeil. Terminer en appliquant du mascara.\",\"Appliquez un soup\u00e7on de fard \u00e0 paupi\u00e8res sur le trait de ligneur pour le maintenir en place et l\u2019adoucir. Terminer en appliquant du mascara.\",\"Cr\u00e8me contour des yeux\",\"Base\",\"Fard \u00e0 paupi\u00e8res de teinte neutre\",\"Crayon pour les yeux\",\"Gel\",\"Ligneur pour les yeux\",\"Mascara\",\"Essai de produit\",\"Essayer un maquillage instantan\u00e9\",\"Utiliser une photo\",\"Utiliser une photo pour d\u00e9buter\",\"T\u00e9l\u00e9charger l\u2019appli\",\"Bouche Ferm\u00e9e\",\"Bouche Ouverte\",\"Bonne mine\",\"Raffiner les contours\",\"Le positionnement est-il ad\u00e9quat?\",\"Filtre\",\"Teintes de rouge \u00e0 l\u00e8vres\",\"Cat\u00e9gories\",\"Color IQ\",\"Trouver une couleur\",\"Aucun r\u00e9sultat\",\"Modifier la s\u00e9lection de filtres et essayer \u00e0 nouveau\",\"Vous d\u00e9sirez obtenir votre no Color IQ?\",\"Passez en magasin pour d\u00e9couvrir les teintes de rouges \u00e0 l\u00e8vres, de fond de teint et de cache-cernes qui conviennent parfaitement \u00e0 votre carnation.\",\"Invalide Color IQ\",\"Essayez \u00e0 nouveau\",\"Appliquer\",\"Annuler\",\"Cils\",\"L\u00e8vres\",\"Trouver des faux cils\",\"Surprise\",\"Partager\",\"Reprendre\",\"Ajouter un rouge \u00e0 l\u00e8vres\",\"Ajouter des faux cils\",\"Techniques essentielles d\u2019application de crayon pour les yeux pour d\u00e9finir le regard en toute circonstance.\",\"Pressez d\u00e9licatement la peau sous l\u2019\u0153il \u00e0 l\u2019aide de trois doigts, sans l\u2019\u00e9tirer.\",\"Un soup\u00e7on de base\u00a0: un tout petit pois de produit sur chaque paupi\u00e8re suffit.\",\"Illuminez le centre de la paupi\u00e8re et de l\u2019arcade sourcili\u00e8re avec une ombre neutre claire ou chatoyante pour faire ressortir le trait de ligneur.\",\"Penchez l\u00e9g\u00e8rement la t\u00eate vers l\u2019arri\u00e8re afin de mieux voir la paupi\u00e8re au moment de l\u2019application.\",\"Appuyez le coude sur le comptoir pour stabiliser la main.\",\"Votre sourcil sera votre guide\u00a0: alignez l\u2019extr\u00e9mit\u00e9 de l\u2019aile de ligneur \u00e0 la fin du sourcil.\",\"Tracez d\u2019abord une aile courte, que vous pourrez toujours allonger par la suite. Il est plus facile de prolonger une ligne que de l\u2019effacer.\",\"Faites fondre l\u2019aile au trait de ligneur en esquissant de courts traits pour refermer la ligne.\",\"Ajoutez une dimension amusante \u00e0 votre regard en optant pour un fard \u00e0 paupi\u00e8res chatoyant!\",\"Si vous superposez les nuances, appliquez un peu plus de pigments que d\u00e9sir\u00e9 au final car une partie de la couleur sera perdue lorsque vous l\u2019estomperez.\",\"Appliquez d\u2019abord une petite quantit\u00e9 de fard et augmentez l\u2019intensit\u00e9 \u00e0 votre guise. Il est surprenant de constater qu\u2019une petite quantit\u00e9 vous m\u00e8nera loin dans l\u2019ach\u00e8vement de votre look. Effacez une ligne in\u00e9gale sans chichi \u00e0 l\u2019aide d\u2019un cure-oreille tremp\u00e9 dans un soup\u00e7on d\u2019huile pour le visage\",\"Id\u00e9al pour\",\"tous les types de peau\",\"Hydratant et anti-vieillissement\",\"D\u00e9sengorgeant\",\"Port longue dur\u00e9e sans accumulation dans le creux de la paupi\u00e8re\",\"Cr\u00e9er une base lisse\",\"Port toute la journ\u00e9e et r\u00e9sistance \u00e0 l\u2019humidit\u00e9\",\"Finition durable\",\"Couleur intense\",\"Tout en un\",\"Pr\u00e9cision digne d\u2019un pinceau\",\"Facile \u00e0 utiliser\",\"Application pr\u00e9cise\",\"Application pr\u00e9cise avanc\u00e9e\",\"Look faux cils ultranoirs\",\"Allongement et d\u00e9finition\",\"Volume et courbes de pr\u00e9cision\",\"D\u00e9sengorgement et illumination\",\"Tous les types de peau et anti-vieillissement\",\"Longue dur\u00e9e et port imperceptible\",\"Application de fard m\u00e9tallique et scintillant\",\"Application de fard cr\u00e8me\",\"Port longue dur\u00e9e\",\"Application minute\",\"Pigmentation intense et application concentr\u00e9e\",\"Pr\u00e9paration et port longue dur\u00e9e\",\"Pr\u00e9cision et finition translucide\",\"Application uniforme\",\"Estompement\",\"Fini mat\",\"D\u00e9finition spectaculaire\",\"Application facile\",\"Couvrance progressive et recourbement \u00e9poustouflant\",\"D\u00e9finition et longueur des cils\",\"Intensit\u00e9 sur mesure\",\"Couleur intense et volume progressif\",\"Couleur intense\",\"Application mouill\u00e9e ou \u00e0 sec\",\"Couleur haute pigmentation marqu\u00e9e\",\"Application mouill\u00e9e ou \u00e0 sec\",\"D\u00e9finition spectaculaire\",\"Intensit\u00e9 sur mesure\",\"Couleurs \u00e0 estomper et tenuelongue dur\u00e9e\",\"Cr\u00e8mes contour de l\u2019\u0153il\",\"Bases\",\"Ligneurs\",\"Fard \u00e0 paupi\u00e8res fonc\u00e9\",\"Pinceaux \u00e0 paupi\u00e8res\",\"Fard \u00e0 paupi\u00e8res de ton moyen\",\"Pinceaux estompeurs\",\"Mascara\",\"Finition durable\",\"Application mouill\u00e9e ou \u00e0 sec et intensification\",\"Couleur intense\",\"Tenue longue dur\u00e9e sans accumulation dans le creux de la paupi\u00e8re\",\"Estompement\",\"Application cibl\u00e9e dans le creux de la paupi\u00e8re\",\"Exactitude\",\"Ombrage\",\"Double usage\",\"Pr\u00e9cision\",\"Tenue longue dur\u00e9e\",\"Termin\u00e9!\",\"Partager votre m\u00e9tamorphose\",\"Comparer\",\"Pinceaux estompeurs\",\"Choisissez un look\",\"COMMENCER TUTORIEL\",\"Appliquez le fard \u00e0 paupi\u00e8res sur le ligneur, puis estompez vers le pli de l\u2019\u0153il et la ligne inf\u00e9rieure des cils.\",\"Haut de la page\",\"T\u00e9l\u00e9chargez l\u2019appli Sephora to Go pour iPhone pour une exp\u00e9rience 3D sup\u00e9rieure\",\"T\u00e9l\u00e9charger l\u2019appli\",\"T\u00e9l\u00e9charger\",\"Nom de la teinte\",\"Nom des cils\",\"Mascara\",\"Ligneur\",\"Pinceau estompeur\",\"Gel ou crayon pour les yeux\",\"Vivez la meilleure exp\u00e9rience 3D en direct avec l\u2019application mobile de Sephora\",\"Looks\",\"Changez de Photo\",\"Joues\",\"Yeux\",\"Personnalisez Votre Look\",\"COMPAREZ\",\"NOUVELLE PHOTO\",\"Choisir les faux cils\",\"RETOUR\",\"Comparez les combinaisons pour les l\u00e8vres, les faux-cils et le fard \u00e0 paupi\u00e8res et partagez-les avec vos amis!\",\"Cam\u00e9ra d\u00e9tect\u00e9e!\",\"Vous \u00eates pr\u00eat \u00e0 y aller!\",\"cliquez sur \u00abpermettre\u00bb \u00e0 la page suivante pour faire l\u2019essai en direct\",\"obtenir\",\"1. D\u00e9placez les points pour modifier le contour de vos l\u00e8vres.\",\"R\u00e9initialisation\",\"Prendre une Nouvelle Photo\",\"R\u00e9sultats\",\"MARQUE\",\"Mon Color IQ\",\"MES FAVORIS\",\"aucune cam\u00e9ra Web n\u2019a \u00e9t\u00e9 d\u00e9tect\u00e9e\",\"TEINTES SIMPLES\",\"illuminateur\",\"chatoyant\",\"satin\",\"essayer la version Web\",\"apprendre davantage\",\"baies\",\"neutre\",\"universel\",\"non-conventionnel\",\"Pourquoi Vous l\u2019 &nbsp &nbsp &nbsp\",\"Essayez instantan\u00e9ment des teintes pour les l\u00e8vres, des fards \u00e0 paupi\u00e8res et des faux-cils.\",\"Soyez inspir\u00e9 et essayez des looks cr\u00e9\u00e9s par les experts Sephora.\",\"Apprenez les nouvelles techniques et commencez votre propre tutoriel vid\u00e9o.\",\"L\u00e8vres et joues brillantes\",\"ligneur ail\u00e9 et l\u00e8vres rouges\",\"yeux charbonneux\",\"R\u00e9duire les plis\",\"l\u00e8vres neutres et yeux brillants\",\"L\u00e8vres fonc\u00e9es dramatiques\",\"yeux de tous les jours\",\"Choisir une nouvelle photo\",\"Pour de meilleurs r\u00e9sultats, veuillez \u00eatre dans une pi\u00e8ce bien \u00e9clair\u00e9e et utilisez une cam\u00e9ra \u00e0 haute d\u00e9finition. Regardez droit dans l\u2019objectif et d\u00e9gagez vos cheveux de votre visage.\",\"Filtrer selon les r\u00e9sultats Color IQ\",\"Affinez Photo\",\"Reprendre\",\"Choisir une teinte pour les l\u00e8vres\",\"Choisir des faux cils\",\"Choisir un fard \u00e0 paupi\u00e8res\"]');
+
+var isSEA=parseInt("0");
+var apiserver = "162.242.166.176"
+var appname = "sephora-web3.0";
+var ciqobject={"2R03":"1","2R04":"1","2R05":"1","3R04":"1","3R05":"1","4R04":"1","4R05":"1","5R04":"1","5R05":"1","1R02":"2","1R03":"2","1R04":"2","1R05":"2","1Y01":"2","1Y02":"2","1Y03":"2","1Y04":"2","1Y05":"2","2Y01":"2","2Y02":"2","2Y03":"2","2Y04":"2","2Y05":"2","3Y01":"3","3Y02":"3","3Y03":"3","3Y04":"3","3Y05":"3","4Y01":"3","4Y02":"3","4Y03":"3","4Y04":"3","4Y05":"3","5Y01":"3","5Y02":"3","5Y03":"3","5Y04":"3","5Y05":"3","2R06":"4","2R07":"4","2R08":"4","2R09":"4","3R06":"4","3R07":"4","3R08":"4","3R09":"4","4R06":"4","4R07":"4","4R08":"4","4R09":"4","5R06":"4","5R07":"4","1R06":"5","1R07":"5","1R08":"5","1R09":"5","1Y06":"5","1Y07":"5","1Y08":"5","1Y09":"5","2Y06":"5","2Y07":"5","2Y08":"5","2Y09":"5","3Y06":"6","3Y07":"6","3Y08":"6","3Y09":"6","4Y06":"6","4Y07":"6","4Y08":"6","4Y09":"6","5Y06":"6","5Y07":"6","5Y08":"6","5Y09":"6","2R10":"7","2R11":"7","2R12":"7","2R13":"7","3R10":"7","3R11":"7","3R12":"7","3R13":"7","1R10":"8","1R11":"8","1R12":"8","1R13":"8","1Y10":"8","1Y11":"8","1Y12":"8","1Y13":"8","2Y10":"8","2Y11":"8","2Y12":"8","2Y13":"8","3Y10":"9","3Y11":"9","3Y12":"9","4Y10":"9","4Y11":"9","1Y14":"10","1R14":"10","1R15":"10","2R14":"10","2R15":"10","3R14":"10","3R15":"10","4R14":"10","4R15":"10"};
+var device="";
+var country = "US";
+var lang = "en";
+var countrycode = country+"_"+lang;
+countrycode = countrycode.toLowerCase();
+
+var imid = "";
+var imip = "";
+
+var count = 0;
+function instructions() {
+if(lang=="fr"){
+	if(count==0) {
+		document.getElementById("instruct").innerHTML = "2. Déplacez les points pour modifier le contour de vos Œil gauche.";
+		count++;
+	}
+	else {
+		document.getElementById("instruct").innerHTML = "3. Déplacez les points pour modifier le contour de vos Œil droit.";
+	}
+}else {
+	if(count==0) {
+                document.getElementById("instruct").innerHTML = "2. Move the dots to edit the outline of your left eye.";
+                count++;
+        }
+        else {
+                document.getElementById("instruct").innerHTML = "3. Move the dots to edit the outline of your right eye.";
+}
+}
+}
+
+function resetInstruct() {
+	count = 0;
+if(lang=="fr")
+	document.getElementById("instruct").innerHTML = "1. Déplacez les points pour modifier le contour de vos lèvres.";
+else
+	 document.getElementById("instruct").innerHTML = "1. Move the dots to edit the outline of your lips.";
+}
+
+var urlToShare = "http://www.sephora.com/virtualartist";
+var pinterestUrl = "http://seph.me/1ReLFMo";
+var twitterUrl = "http://seph.me/1O0trOb";
+var caption = "www.sephora.com/virtualartist";
+
+function addEvent(node,eventtype,func) {
+  if(node==null || typeof node == "undefined") return;
+  if(node.addEventListener) {
+    node.addEventListener(eventtype,func);
+  } else if(node.attachEvent) {
+    node.attachEvent("on"+eventtype,func);
+  } else {
+    node["on"+eventtype]=func;
+  }
+}
+
+function startStreamPhoto(stream) {
+  if(stream.getVideoTracks().length < 1) {
+    //Webcam not detected
+    // showwarning("No webcam device has been found.",start_dd);
+    console.log("getvideotracks failed");
+    start_webcam_flash('camview');
+
+    //do 2D
+    return;
+  }
+
+  show_loader();
+
+  //video.src = window.URL.createObjectURL(stream);
+
+  video.addEventListener('canplay', function DoStuff() {
+          video.removeEventListener('canplay', DoStuff, true);
+          setTimeout(function() {
+                  console.log("play video");
+
+                  hide_loader();
+                  video.play();
+
+                  var canvas_photo=document.getElementById('canvas_photo');
+                  canvas_photo.width = video.videoWidth;
+                  canvas_photo.style.marginLeft=Math.round(-1*video.videoWidth/2)+"px";
+
+                  canvas_photo.height = video.videoHeight;
+
+                  mWidth = video.videoWidth;
+                  mHeight = video.videoHeight;
+          }, 1000);
+  }, true);
+
+  var domURL = window.URL || window.webkitURL;
+  video.src = domURL ? domURL.createObjectURL(stream) : stream;
+
+  video.play();
+  video.playing=1;
+}
+
+function errorCallbackPhoto(e) {
+  console.log("Error starting stream for photo");
+  start_webcam_flash('camview');
+//  showwarning("No webcam device has been found.",start_dd);
+}
+
+
+/*
+function regWebcamUpload(url) {
+  	url=url.trim();
+  	document.getElementById('apiresult').src="http://sephoravirtualartist.com/sephora-web3.0/register2.php?x="+encodeURIComponent(url);
+}
+*/
+
+function checkLiveFrame(frameid) {
+  	if(document.getElementById(frameid)) {
+    		MFLiveAd.applyMakeup(currentmakeover_live,'sephoralivetryon_frame');
+  	} else {
+    		setTimeout(function() {checkLiveFrame(frameid);},100);
+  	}
+}
+
+function selectLive() {
+	setTimeout(addLiveFrame, 500);
+}
+
+function addLiveFrame() {
+  	if(document.getElementById('sephoralivetryon_frame')) {
+    		return;
+  	}
+
+  	var framescript=document.createElement("script");
+  	framescript.innerHTML="MFLiveAd.addFrame('sephoralivetryon_frame');";
+	
+  	document.getElementById('livecontainer').appendChild(framescript);
+  	setTimeout(function() {checkLiveFrame('sephoralivetryon_frame');},100);
+}
+
+var currentMode = "photo";
+function changeMode(mode) {
+	if (typeof mode !== "undefined") {
+		toMode = mode;
+	} else {
+		if(currentMode == "live") {
+			toMode = "photo";
+		} else {
+			toMode = "live";
+		}
+	}
+
+	switch(toMode) {
+		case "live":
+			document.getElementById('makeovercontainer_live').style.width="";
+			document.getElementById('makeovercontainer_live').style.height="";
+			document.getElementById('switchModeDial').style.float="left";
+			selectLive();
+			hide('btnNewPhoto');
+			hide('btnRefine');
+			currentMode = "live";
+			document.getElementById('txt105').style.textDecoration="underline";
+			document.getElementById('photo_toggle').style.textDecoration="";
+			break;
+		case "photo":
+			document.getElementById('makeovercontainer_live').style.width="0px";
+			document.getElementById('makeovercontainer_live').style.height="0px";
+			document.getElementById('switchModeDial').style.float="right";
+			show('btnNewPhoto');
+			show('btnRefine');
+			document.getElementById('txt105').style.textDecoration="";
+                        document.getElementById('photo_toggle').style.textDecoration="underline";
+			currentMode = "photo";
+			if(mainim=="") {
+				show('photo');
+				hide('photo_x');
+			} else {
+				show('photo_x');
+			}
+			break;
+		default:
+	}
+}
+
+function findmousepos(e) {
+  	var mousex, mousey;
+
+  	if (!e) e = window.event; // works on IE, but not NS (we rely on NS passing us the event)
+  	if (e) {
+    		if (e.pageX || e.pageY) { // this doesn't work on IE6!! (works on FF,Moz,Opera7)
+      			mousex = e.pageX;
+      			mousey = e.pageY;
+      			algor = '[e.pageX]';
+      			if (e.clientX || e.clientY) {
+				algor += ' [e.clientX] '
+			}
+    		} else if (e.clientX || e.clientY) { // works on IE6,FF,Moz,Opera7
+      			mousex = e.clientX +
+        			(document.documentElement.scrollLeft ||
+         			document.body.scrollLeft) -
+         			document.documentElement.clientLeft;
+      			mousey = e.clientY +
+        			(document.documentElement.scrollTop ||
+         			document.body.scrollTop) -
+         			document.documentElement.clientTop;
+	
+	
+      			algor = '[e.clientX]';
+      			if (e.pageX || e.pageY) {
+				algor += ' [e.pageX] ';
+			}
+    		}
+  	}
+	
+  	return [mousex,mousey];
+}
+
+
+var initdotpanelxy=[0,0];
+var initmovepnt=[0,0];
+var dragging_adjust=0;
+function start_adjustmove(e) {
+  	dragging_adjust=1;
+  	initmovepnt=findmousepos(e);
+	
+	initdotpanelxy[0]=parseFloat(document.getElementById('adjust_'+currentAdjustStep).style.left);
+	initdotpanelxy[1]=parseFloat(document.getElementById('adjust_'+currentAdjustStep).style.top);
+}
+
+function adjustmove(e) {
+  	if(dragdotE) return;
+
+  	if(dragging_adjust==0) {
+    		return;
+  	}
+
+  	var xypos=findmousepos(e);
+
+  	var deltax=xypos[0]-initmovepnt[0];
+  	var deltay=xypos[1]-initmovepnt[1];
+
+	document.getElementById('adjust_'+currentAdjustStep).style.left = (initdotpanelxy[0]+deltax)+"px"; 
+	document.getElementById('adjust_'+currentAdjustStep).style.top = (initdotpanelxy[1]+deltay)+"px"; 
+}
+
+function end_adjustmove(e) {
+  dragging_adjust=0;
+}
+
+
+var targ;
+var dragdotE;
+
+function dot_mouseDown(event){
+	if (!event) {
+		var event = window.event;
+	}
+
+	if(event.preventDefault) event.preventDefault();
+	targ = event.target ? event.target : event.srcElement;
+	if (targ.className != "adjustPt") return;
+
+	dot_offsetX = event.clientX;
+	dot_offsetY = event.clientY;
+	if(!targ.style.left) { targ.style.left='0px'};
+	if(!targ.style.top) { targ.style.top='0px'};
+
+	startX = parseInt(targ.style.left);
+	startY = parseInt(targ.style.top);
+	
+	dragdotE = true;
+
+	return false;
+}
+
+function dot_mouseMove(event){
+  	if(!dragdotE) return;
+  	if (!event) var event = window.event;
+  	targ.style.left = startX + event.clientX - dot_offsetX + "px";
+  	targ.style.top = startY + event.clientY - dot_offsetY + "px";
+  	return false;
+}
+
+function dot_mouseUp(event) {
+	dragdotE = false;
+  	if (!event) {
+      	var event = window.event;
+  	}
+  	targ = event.target ? event.target : event.srcElement;
+  	if (targ.className.indexOf("adjustPt")<0) return;
+	
+  	if(event.preventDefault) event.preventDefault();
+}
+
+function initall() {
+	initLipAndLashPage("virtual try on");
+	parse_data();
+	translate();
+	placeholder();
+
+	persistImg();
+
+	MFLiveAd.publisherid='sephora3_0';
+
+	if(is.ipod() || is.iphone() || is.ipad()) {
+		$(".and_dl").hide();
+		hide('live_section');
+	} else if(is.androidPhone() || is.androidTablet()) {
+		$(".ios_dl").hide();
+		hide('live_section');
+	} else if(!is.safari(10)) {
+		hide('live_section');
+	}
+		
+}
+
+function placeholder() {
+	if(lang=="fr") {
+		document.getElementById("lips_textsearch").placeholder = frTxt[124];
+		document.getElementById("lash_textsearch").placeholder = frTxt[125];
+		document.getElementById("eyeshadow_textsearch").placeholder = frTxt[124];
+	}
+	else{
+		document.getElementById("lips_textsearch").placeholder = enTxt[124];
+                document.getElementById("lash_textsearch").placeholder = enTxt[125];
+                document.getElementById("eyeshadow_textsearch").placeholder = enTxt[124];	
+
+	}
+}
+
+function translate() {
+document.getElementById('footer_'+country.toLowerCase()).className = "footer_flag_on";
+	if( country == "CA" && lang == "fr") {
+		for(var i=0;i<frTxt.length;i++) {
+			if(document.getElementById('txt'+i)) {
+				document.getElementById('txt'+i).innerHTML = frTxt[i];
+				for(var j=0;j<10;j++) {
+					if(document.getElementById('txt'+i+'_'+j)) {
+						document.getElementById('txt'+i+'_'+j).innerHTML = frTxt[i];
+					}
+				}
+			}
+		}
+	} else { //if(country == "US" || (country == "CA" && lang == "en")){
+		for(var i=0;i<enTxt.length;i++) {
+			if(document.getElementById('txt'+i)) {
+				document.getElementById('txt'+i).innerHTML = enTxt[i];
+				for(var j=0;j<10;j++) {
+					if(document.getElementById('txt'+i+'_'+j)) {
+						document.getElementById('txt'+i+'_'+j).innerHTML = enTxt[i];
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+function handle_mfswitchmode(mode) {
+switch(mode) {
+	case "dd":
+		changeMode('photo');
+		break;
+	case "ad":
+		changeMode('live');
+		show('live_section');
+		break;
+	default:
+		break;
+}
+}
+
+function init_products() {
+	hide_loader();
+
+	if(imid != "" && imip != "") {
+		toPhoto();
+	} else if(is.safari()) {
+		hide('live_photo_bar');
+		toPhoto();
+	} else if(device&&device=="tablet"){
+		hide('live_photo_bar');
+		toPhoto();
+	} else if(detectCamera()===true) {
+		document.getElementById('camera_detected').style.display="block";
+		show('live_photo_bar');
+		show('live_section');
+	} else {
+		hide('live_section');
+		show('live_photo_bar');
+	}
+
+
+	//objects
+	fillBrands();
+	fillCIQ();
+
+	//layouts
+	populatePlacement();
+	populateFamily();
+	populateFilterFinish();
+	populateFilterBrands();
+	populateFilterCategories();
+
+	orderShades();
+
+	playFilters('eyeshadow');
+	playFilters('lips');
+	playFilters('lash');
+
+	for(var c in makeoverobject) {
+		populateShade(c);
+	}
+	selectMenu('lips');
+
+	applyInitialLook();
+
+}
+
+function cleanInput(id){
+$("input[name=coloriq"+id+"]").val("");
+changeColorIQ();
+}
+
+function autoFocus(id){
+if ($("input[name=coloriq"+id+"]").val() == "" && id != 4) {
+	$("input[name=coloriq"+id+"]").focus();
+}
+}
+
+function changeColorIQ(){
+var category = currentCategory;
+
+var enabled = document.getElementById("filter_"+category+"_colorIQ").className;
+enabled = enabled.split("_");
+enabled = enabled[2];
+
+if(enabled == 0) {
+	return;
+}
+
+var category = (typeof category !== "undefined") ? category : currentCategory;
+var userCIQ = document.getElementById('ciq0').value 
+	+ document.getElementById('ciq1').value
+	+ document.getElementById('ciq2').value 
+	+ document.getElementById('ciq3').value;
+userCIQ = userCIQ.trim().split(" ").join("").toUpperCase();
+
+filters['currentFilters']['colorIQ'][category][0] = 1;
+filters['currentFilters']['colorIQ'][category][1] = userCIQ;
+
+playFilters();
+}
+
+$(function(){
+	$('#header').load("jheader.html");
+	$('#leftnav').load("jleftnav.html");
+	//$('#footer').load("jfooter.html");
+});
+
+</script>
+
+</head>
+<body onload="initall();" style="font-family:'Avalon';" onmousemove="dot_mouseMove(event);adjustmove(event);" onmouseup="dot_mouseUp(event);end_adjustmove(event);">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39239657-30', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<div class="fullpage" style="position:absolute;top:0px;left:50%;transform:translate(-50%,0px);width:100%;">
+<!-- ************* top menu ************* -->
+<div id="header"></div>
+
+
+<!-- tryon screen -->
+<div id="tab_tryon" style="width:100%;position:relative;">
+
+<div style="display:flex;flex-direction:column;">
+<div class="flex_child_top">
+
+<!-- left panel -->
+<div class="leftpanelcontainer">
+	<div style="position:absolute;left:0px;top:0px;width:100%;height:100%;background:#FFFFFF;opacity:0.2;"></div>
+	<div style="position:absolute;left:0px;top:0px;width:100%;height:510px;">
+
+		<div id="txt221" style="float:left;margin-top:20px;width:100%;height:40px;"></div>
+	
+		<div id="categories" style="float:left;margin-top:26px;width:100%;height:30px;font-size:10px;">
+			<div id="menu_lips" class="menu_off" onclick="selectMenu('lips');">
+				<div style="text-transform:uppercase;margin:5% auto;display:inline-block;height:70%;line-height:200%;border-bottom:2px solid black;width:90%;">
+					<span id="txt89"></span>
+				</div>
+			</div>
+			<div id="menu_lash" class="menu_off" onclick="selectMenu('lash');">
+				<div style="text-transform:uppercase;margin:5% auto;display:inline-block;height:70%;line-height:200%;border-bottom:2px solid black;width:90%;">
+					<span id="txt90"></span>
+				</div>
+			</div>
+			<div id="menu_eyeshadow" class="menu_off" onclick="selectMenu('eyeshadow');">
+				<div style="text-transform:uppercase;margin:5% auto;display:inline-block;height:70%;line-height:200%;border-bottom:2px solid black;width:90%;">
+					<span id="txt91"></span>
+				</div>
+			</div>
+		</div>
+	
+		<div id="eyeshadow_placement" style="float:left;margin-top:11px;width:100%;display:none;"></div>
+		<div id="lips_placement" style="float:left;margin-top:11px;width:100%;display:none;"></div>
+		<div id="lash_placement" style="float:left;margin-top:11px;width:100%;display:none;"></div>
+		
+		<input id="eyeshadow_textsearch" type="text" name="eyeshadow_textsearch" 
+			style="text-transform:uppercase;float:left;margin-top:20px;width:90%;height:31px;padding-left:10px;font-size:12px;font-family:Helvetica;color:#999999;letter-spacing:0;display:none;border:1px solid lightgray;"
+			value="" onkeypress="productSearch(event);" onchange="productSearch(event);"><span id="find_shadow"></span></input>
+		<input id="lips_textsearch" type="text" name="lips_textsearch" 
+			style="text-transform:uppercase;float:left;margin-top:20px;width:90%;height:31px;padding-left:10px;font-size:12px;font-family:Helvetica;color:#999999;letter-spacing:0;display:none;border:1px solid lightgray;"
+			value="" onkeypress="productSearch(event);" onchange="productSearch(event);">
+		<input id="lash_textsearch" type="text" name="lash_textsearch" 
+			style="text-transform:uppercase;float:left;margin-top:20px;width:90%;height:31px;padding-left:10px;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;display:none;border:1px solid lightgray;"
+			value="" onkeypress="productSearch(event);" onchange="productSearch(event);">
+
+		<div id="btnFilter" class="left_panel_button" onclick="showFilterPopup();" style="clear:none;">
+			<img id="btnFilter_img" src="res/icon_filter.png" style="float:left;width:22px;height:22px;">
+			<div id="txt231" style="text-transform:uppercase;float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;"></div>
+		</div>
+
+		<div id="btnFilter_clearAll" class="left_panel_button" style="text-transform:uppercase;clear:none;float:right;margin-right:19px;border:1px solid black;font-size:12px;text-align:center;line-height:23px;height:20px;cursor:pointer;display:none;white-space:nowrap;padding:0px 5px;" onclick="clearAllFilters();applyFilters();">
+		<span id="txt127_0">CLEAR ALL</span>
+		</div>
+
+		<div id="btnSurpriseMe" class="left_panel_button" onclick="surpriseMe();">
+			<img src="res/icon_surpriseme.png" style="float:left;width:22px;argin-top:4px;">
+			<div id="txt98_0" style="text-transform:uppercase;float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;"></div>
+		</div>
+	
+		<div style="float:left;width:1px;clear:both;margin-top:18px;"></div>
+		
+		<div id="btnNewPhoto" class="left_panel_button" onclick="show('photo');show('photo_x');">
+			<img src="res/icon_newphoto.png" style="float:left;width:22px;height:22px;">
+			<div id="txt350" style="float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:HelveticaNeue;color:#000000;letter-spacing:0;">NEW PHOTO</div>
+		</div>
+	
+		<div id="btnRefine" class="left_panel_button" onclick="adjustStep('lips');resetInstruct();">
+			<img src="res/icon_refine.png" style="float:left;width:22px;height:22px;">
+			<div id="txt104" style="text-transform:uppercase;float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:HelveticaNeue;color:#000000;letter-spacing:0;"></div>
+		</div>
+	
+		<div id="btnCompare" class="left_panel_button" onclick="addToCompare();">
+			<img src="res/icon_compare.png" style="float:left;width:22px;height:22px;">
+			<div id="txt349" style="float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;">COMPARE</div>
+		</div>
+
+		<div id="btnShare" class="left_panel_button" onclick="share();">
+        		<img src="res/icon_share.png" style="float:left;width:22px;height:22px;">
+        		<div id="txt97" style="text-transform:uppercase;float:left;margin-left:4px;line-height:28px;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;"></div>
+		</div>
+
+	</div>
+
+	<div id="live_photo_bar" style="position:absolute;left:0px;bottom:0px;width:100%;height:23px;">
+		<div id="txt105" onclick="changeMode('live');" style="cursor:pointer;text-decoration:underline;text-transform:uppercase;display:inline-block;font-size:12px;font-family:HelveticaNeue-Medium;color:#000000;letter-spacing:0;font-weight:600;transform:translate(0px, -10px);"></div>
+		<div id="switchModeBg" style="margin:3px 0px;width:44px;height:23px;display:inline-block;background:url(res/mode_switch_bg.png);" onclick="changeMode();">
+			<div id="switchModeDial" style="float:right;top:0px;width:23px;height:23px;cursor:pointer;background:url(res/mode_switch_switch.png);"></div>
+		</div>
+		<div id="photo_toggle" onclick="changeMode('photo');" style="cursor:pointer;text-decoration:none;display:inline-block;font-size:12px;font-family:Helvetica;color:#000000;letter-spacing:0;font-weight:600;transform:translate(0px, -10px);">PHOTO</div>
+	</div>
+</div>
+<!-- end of left panel -->
+
+<!-- makeover windows -->
+<div id="makeovercontainer" class="canvascontainer">
+	<div id="mainimcontainer" class="canvascontainer">
+		<img id="origim" src="" style="position:absolute;width:100%;height:auto;">
+		<img id="mainim" src="" style="position:absolute;width:100%;height:auto;">
+	</div>
+</div>
+
+<div id="makeovercontainer_live" class="canvascontainer" style="overflow:hidden;">
+	<div class="livecontainer_scale" style="position:relative;">
+		<div id="livecontainer" style="position:relative;left:50%;top:0%;transform:translate(-50%, 0%);width:556px;height:535px;">
+		</div>
+	</div>
+</div>
+<!-- end of makeover windows -->
+
+<!-- right panel -->
+<div class="rightpanelcontainer">
+	<div style="position:absolute;left:0px;top:0px;width:100%;height:100%;background:#FFFFFF;opacity:0.2;"></div>
+	<div class="rightpanelcontainer" style="margin-right:0px;">
+
+<!-- lips panels -->
+		<div id="lips_panel">
+			<div id="lips_family">
+				<div class="right_panel_header" id="txt87"></div>
+				<hr>
+				<div id="lips_family_content" class="family_swatch_container"></div>
+			</div>
+			<div id="lips_style" style="display:none;">
+				<div id="lips_style_content" style="float:left;margin-left:13px;margin-top:7px;width:240px;height:265px;overflow-y:scroll;"></div>
+			</div>
+			<div id="lips_shade">
+				<div class="right_panel_header" id="txt88"></div>
+				<hr>
+				<div class="shade_swatch_container" id="lips_shade_content"></div>
+			</div>
+			<div id="lips_palette" style="display:none;">
+				<div class="right_panel_header">Palette</div>
+				<div style="float:right;margin-top:14px;margin-bottom:3px;width:40%;height:16px;font-size:12px;font-family:HelveticaNeue;line-height:16px;text-align:right;cursor:pointer;" onclick="hidePalette('lips');">x Close</div>
+				<hr>
+				<div class="shade_swatch_container" id="lips_palette_content" style="height:135px;overflow-y:scroll;"></div>
+			</div>
+
+		</div>
+<!-- end of lips panels -->
+
+<!-- lash panels -->
+		<div id="lash_panel">
+			<div id="lash_family">
+				<div id="txt133" class="right_panel_header"></div>
+				<hr>
+				<div id="lash_family_content" style="float:left;margin-left:0px;margin-top:7px;width:100%;"></div>
+			</div>
+			<div id="lash_style" style="display:none;">
+				<div id="txt133" class="right_panel_header"></div>
+				<hr>
+				<div id="lash_style_content" style="float:left;margin-left:0px;margin-top:7px;width:270px;"></div>
+			</div>
+			<div id="lash_shade">
+				<div id="txt351" class="right_panel_header">Choose a Lash</div>
+				<hr>
+				<div class="shade_swatch_container" id="lash_shade_content"></div>
+			</div>
+			<div id="lash_palette" style="display:none;">
+				<div id="lash_palette_content" style="float:left;margin-left:13px;margin-top:7px;width:240px;height:135px;overflow-y:scroll;"></div>
+			</div>
+		</div>
+<!-- end of lash panels -->
+
+<!-- eyeshadow panels -->
+		<div id="eyeshadow_panel">
+			<div id="eyeshadow_family">
+				<div class="right_panel_header" id="txt87_0"></div>
+				<hr>
+				<div id="eyeshadow_family_content" class="family_swatch_container"></div>
+			</div>
+			<div id="eyeshadow_style" style="display:none;">
+				<div id="eyeshadow_style_content" style="float:left;margin-left:13px;margin-top:7px;width:240px;height:265px;overflow-y:scroll;"></div>
+			</div>
+			<div id="eyeshadow_shade">
+				<div class="right_panel_header" id="txt88_0"></div>
+				<hr>
+				<div class="shade_swatch_container" id="eyeshadow_shade_content"></div>
+			</div>
+			<div id="eyeshadow_palette" style="display:none;">
+				<div class="right_panel_header">Palette</div>
+				<div style="float:right;margin-top:14px;margin-bottom:3px;width:40%;height:16px;font-size:12px;font-family:HelveticaNeue;line-height:16px;text-align:right;cursor:pointer;" onclick="hidePalette('eyeshadow');">x Close</div>
+				<hr>
+				<div class="shade_swatch_container" id="eyeshadow_palette_content" style="height:135px;overflow-y:scroll;"></div>
+			</div>
+		</div>
+<!-- end of eyeshadow panels -->
+	</div>
+</div>
+<!-- end of right panel -->
+
+<!-- current product -->
+<div id="lips_currentProduct" class="current_product_container" style="display:none;">
+</div>
+<div id="lash_currentProduct" class="current_product_container" style="display:none;">
+</div>
+<div id="eyeshadow_currentProduct" class="current_product_container" style="display:none;">
+</div>
+<!-- end of current product -->
+</div>
+
+<div id="flex_child_bot">
+<!-- wearing -->
+<div class="wearing_section">
+<div id="txt95"></div>
+<div class="wearing_container" id="wearingSection"></div>
+</div>
+<!-- end of wearing -->
+</div>
+
+</div> <!-- end of flex container -->
+</div>
+<!-- end of tryon screen -->
+
+<!-- compare screen  -->
+<div id="tab_compare" style="width:100%;display:none;position:relative;">
+
+<div style="display:flex;flex-direction:column;">
+<div class="flex_child_top_compare">
+
+<!-- left panel -->
+<div class="leftpanelcontainer">
+	<div class="left_panel_button" style="line-height:31px;font-size:14px;margin-top:20px;" onclick="hide('tab_compare');show('tab_tryon');">
+	<hov>	◂ <span id="txt352">BACK</span> </hov>
+	</div>
+	<div id="txt101_0" style="float:left;margin-top:10px;width:100%;height:40px;clear:both;"> </div>
+	<div id="txt353" style="float:left;margin-top:13px;clear:both;width:90%;font-size:14px;line-height:21px;margin-bottom:20px;font-family:HelveticaNeue;">
+		Compare lip, lash, and shadow combinations and share them with friends!
+	</div>
+	<div id="btnSurpriseMe" class="left_panel_button" onclick="surpriseCompare();">
+		<img src="res/icon_surpriseme.png" style="float:left;width:22px;height:22px;">
+		<div id="txt98" style="text-transform:uppercase;float:left;margin-left:4px;line-height:31px;font-size:12px;font-family:Helvetica;"></div>
+	</div>
+	<div id="btnShare" class="left_panel_button" onclick="generateShareCompare();">
+       		<img src="res/icon_share.png" style="float:left;width:22px;height:22px;">
+       		<div id="txt97_0" style="text-transform:uppercase;float:left;margin-left:4px;line-height:31px;font-size:12px;font-family:HelveticaNeue;"></div>
+	</div>
+</div>
+	
+<div id="photoquad" class="photo_quad_container">
+</div>
+	
+<div class="compare_products_container">
+	<div class="il_panel_header" id="txt95_0" style="float:left;width:100%;margin-top:20px;margin-bottom:8px;"></div>
+	<hr style="margin-bottom:25px;">
+	<div id="compare_products" class="compare_products_section"></div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- end of compare screen -->
+
+<!--- footer -->
+<div class="footer" style="font-size:12px;color:#666;position:relative;">
+        <div style="width:100%;height:7px;background:#000000;"></div>
+        <div style="font-family:Helvetica;font-size:12px;-webkit-tap-highlight-color:#000000;margin-top:12px;text-align:center;height:60px;">
+                <span style="margin-right:3px;color:#000;">Now Shopping:</span>
+                <span id="footer_us" class="footer_flag_off" style="display:inline-block;" onclick="switchLang('en_US');" title="US Site"
+                        onmouseover="this.style.opacity='1';this.style.textDecoration='underline';document.getElementById('cad_links').style.display='none'"
+                        onmouseout="this.style.opacity='';this.style.textDecoration=''">                        <img src="simg/icon-flag-us.png" class="footer_flag_img">
+                        US
+                </span>
+                <span style="display:inline-block;">|</span>
+                <span id="footer_ca" class="footer_flag_off" style="display:inline-block;" title="Canada Site"
+                        onmouseover="this.style.opacity='1';this.style.textDecoration='underline';document.getElementById('cad_links').style.display='inline-block';"
+                        onmouseout="this.style.opacity='';this.style.textDecoration='';">
+                        <img src="simg/icon-flag-ca.png" class="footer_flag_img">
+                                Canada
+                </span>
+                <span id="cad_links" style="display:none"
+                        onmouseover="document.getElementById('cad_links').style.display='inline-block';"
+                        onmouseout="hide('cad_links');">
+                        <span style="margin:0px 5px;opacity:0.4;text-decoration:none;"
+                                onclick="switchLang('en_CA');"
+                                onmouseover="this.style.opacity='1';this.style.textDecoration='underline'"
+                                onmouseout="this.style.opacity='0.4';this.style.textDecoration='none'">
+                                        English</span>
+                        |
+                        <span style="margin:0px 5px;opacity:0.4;text-decoration:none;"                                onclick="switchLang('fr_CA');"
+                                onmouseover="this.style.opacity='1';this.style.textDecoration='underline'"
+                                onmouseout="this.style.opacity='0.4';this.style.textDecoration='none'">
+                                       Français</span>
+                </span>
+        </div>
+</div>
+<!--- end of footer -->
+
+</div>
+<!-- end of fullpage section -->
+
+<!-- model and photo -->
+<div id="photo" style="position:absolute;left:0px;top:0px;width:100%;height:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;width:100%;top:5%;text-align:center;">
+		<div class="popup_content">
+			<div id="live_section">
+				<img style="margin-top:22px;margin-bottom:0px;left:50%;width:67px;height:67px;cursor:pointer;" src="res/camera_icon.png" onclick="prepareTakePhoto();">
+			<div id="txt128" class="camera_content" style="margin-top:15px;margin-bottom:11.2px;width:230px;height:36.8px;line-height:38px;font-size:22px;font-family:HelveticaNeue;background:#000000;color:#ffffff;cursor:pointer;"
+					onclick="prepareTakePhoto();"></div>
+				<div style="width:80px;height:1px;margin:20px auto 5px auto;display:inline-block;background:#000000;vertical-align:top;"></div>
+				<div style="margin:0px 10px;line-height:40px;font-size:22px;font-family:SephoraSerifJune26;font-style:italic;display:inline-block;">or</div>
+				<div style="width:80px;height:1px;margin:20px auto 5px auto;display:inline-block;background:#000000;"></div>
+			</div>
+			<div id="txt130" style="width:100%;height:36px;line-height:38px;font-size:22px;font-family:HelveticaNeue;"></div>
+
+			<div style="width:100%;margin-top:10px;">
+				<div class="model_off" style="background-image:url(res/model0.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';">
+					<div style="left:0px;top:0px;width:100%;height:100%;background:#ff00ff;overflow:hidden;opacity:0.01">
+					<form id="uploadform" name="uploadform" enctype="multipart/form-data" method="POST" target="uploadresult" action="upload.php" style="padding:0px;font-size:12px;line-height:100px;margin:0px 0px 0px;zoom: 5.5; transform: scale(5.5); -ms-transform: scale(5.5); -webkit-transform: scale(5.5); -o-transform: scale(5.5); -ms-transform-origin: top left; -webkit-transform-origin: top left; -moz-transform-origin: top left;-moz-transform: scale(5.5); transform-origin: top left; -moz-transform-origin: top left;">
+                                        	<div style="position:absolute;left:-800px;top:-5px;width:600px;">
+                                                	<input size="2" type="file" name="upload" value="Upload" onchange="uploadthefile('uploadform');" style="width:1000px;font-size:140px;line-height:100px;cursor:pointer;display:block;">
+                                        	</div>
+                                        	<input type="submit" value="upload" style="display: none;">
+                                        	<input type="hidden" value="xr24" name="pass" style="display: none;">
+                                	</form>
+					</div>
+				</div>
+				<div class="model_off" style="background-image:url(res/light.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';" onclick="selectModel(0);"></div>
+				<div class="model_off" style="background-image:url(res/medium.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';" onclick="selectModel(1);"></div>
+				<br>
+				<div class="model_off" style="background-image:url(res/mediumtanned.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';" onclick="selectModel(2);"></div>
+				<div class="model_off" style="background-image:url(res/deep.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';" onclick="selectModel(3);"></div>
+				<div class="model_off" style="background-image:url(res/dark.png);background-size:100% 100%;" onmouseover="this.className='model_hover';" onmouseout="this.className='model_off';" onclick="selectModel(4);"></div>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+		<div id="photo_x" class="close_popup_button" onclick="hide('photo');"></div>
+	</div>
+</div>
+<!-- end of model and photo -->
+
+<!-- refine points -->
+<div id="refine" style="position:absolute;left:0px;top:0px;width:100%;height:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;width:100%;top:2%;text-align:center;">
+		<div class="popup_content">
+			<div id="txt230" style="width:100%;height:26px;clear:both;font-size:36px;font-family:SephoraSerifJune26-Book;line-height:34px;margin-top:30px;margin-bottom:8px;"></div>
+			<div id="instruct" style="margin-top:22px;width:100%;height:14px;clear:both;font-size:18px;font-family:HelveticaNeue;line-height:18px;">
+				1. Move the dots to edit the outline of <b>your lips</b>.
+			</div>
+			
+			<div id="adjust_containers" style="margin:25px auto;width:530px;height:530px;overflow:hidden;">
+				<div id="adjust_lips" style="position:relative;width:200px;height:200px;" ontouchstart="preventScroll(event);">
+					<img id="adjustImg_lips" src="" style="position:absolute;left:0px;top:0px;width:100%;height:100%;">
+					<div id="adjustDot_lips" style="position:absolute;left:0px;top:0px;width:100%;height:100%;" onmousedown="start_adjustmove(event);"></div>
+				</div>
+				<div id="adjust_leye" style="position:relative;width:200px;height:200px;" ontouchstart="preventScroll(event);">
+                                       	<img id="adjustImg_leye" src="" style="position:absolute;left:0px;top:0px;width:100%;height:100%;">
+                                       	<div id="adjustDot_leye" style="position:absolute;left:0px;top:0px;width:100%;height:100%;" onmousedown="start_adjustmove(event);"></div>
+                               	</div>
+				<div id="adjust_reye" style="position:relative;width:200px;height:200px;" ontouchstart="preventScroll(event);">
+                                       	<img id="adjustImg_reye" src="" style="position:absolute;left:0px;top:0px;width:100%;height:100%;">
+                                       	<div id="adjustDot_reye" style="position:absolute;left:0px;top:0px;width:100%;height:100%;" onmousedown="start_adjustmove(event);"></div>
+                               	</div>
+			</div>
+			
+			<div style="margin-top:17px;width:100%;height:40px;">
+				<div id="teethBtn" class="refine_button" style="text-transform:uppercase;" onclick="toggleTeeth();">TRY OPEN MOUTH</div>
+				<div id="txt359" class="refine_button" onclick="positionPoints();">RESET </div>
+				<div id="txt228" class="refine_button" style="background:#000000;color:#FFFFFF;font-family:HelveticaNeue-Bold;" onclick="pushPoints();instructions();"></div>
+			</div>
+
+			<div style="margin-top:26px;margin-bottom:19px;width:100%;height:10px;font-size:14px;font-family:HelveticaNeue;line-height:12px;cursor:pointer;">
+				<u><span id="txt360" onclick="hide('refine');show('photo');">Take a New Photo</span></u>
+			</div>
+		</div>
+		<div class="close_popup_button" onclick="hide('refine');apply();"></div>
+	</div>
+</div>
+<!-- end of refine points -->
+
+<!-- take photo -->
+<div id="takePhoto" style="left:0px;top:0px;width:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;width:100%;top:2%;text-align:center;">
+		<div class="popup_content">
+			<div id="txt388" style="width:80%;height:42px;clear:both;font-size:18px;font-family:HelveticaNeue;line-height:21px;margin-top:29px;margin-bottom:39px;margin-left:10%;">
+				For best results, be in a well-lit room and use a high-resolution camera. 
+				Face the camera directly and keep hair away from your face.
+			</div>
+			<div style="margin:16px auto;border:2px solid black;width:400px;height:400px;overflow:hidden;position:relative;">
+				<div class="videoframe" style="width:100%;height:100%;">
+          				<div class="camview_container" style="width:100%;height:100%;">
+            				<div id="camview" class="camview"></div>
+					<!-- Canvas for getUserMedia -->
+            				<canvas id="canvas_photo" width="" height="" style="position:absolute;left:50%;-webkit-transform: scaleX(-1);-moz-transform: scaleX(-1);z-index:50;"></canvas>
+            				<video id="video" width="0" height="0" style=""></video>
+					<!-- Canvas ends -->
+          			</div>
+        			</div>
+
+
+				<div id="takephotocanvas" style="position:relative;left:50%;top:50%;width:400px;height:400px;transform:translate(-50%, -50%);"></div>
+			</div>
+			<div style="width:100%;margin-bottom:10px;" onclick="take_snapshot();">
+			<img style="width:67px;height:auto;display:inline-block;margin:0px 10px 6px;cursor:pointer;" src="res/take_photo.png">
+		</div>
+		</div>
+		<div class="close_popup_button" onclick="endTakePhoto();"></div>
+	</div>
+</div>
+<!-- end of take photo -->
+
+<!-- share -->
+<div id="share" style="left:0px;top:0px;width:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;width:100%;top:2%;text-align:center;">
+		<div style="width:650px;margin:0px auto;background:#ffffff;padding:40px 0px;display:inline-block;vertical-align:top;">
+			<div id="txt101" style="width:100%;height:26px;clear:both;font-size:34px;font-family:SephoraSerifJune26-Book;line-height:34px;"></div>
+			<div id="shareim_container" style="margin:40px auto;border:5px solid white;width:355px;height:355px;box-shadow:2px 2px 2px 2px #dddddd;overflow:hidden;">
+				<img id="shareim" style="position:relative;width:0px;height:auto;left:0px;top:0px;" src="">
+			</div>
+			<div style="width:100%;margin-bottom:10px;">
+				<img style="height:25px;display:inline-block;margin:0px 10px;cursor:pointer;" src="simg/share_download.png" onclick="shareDownload();">
+				<img style="height:25px;display:inline-block;margin:0px 10px;cursor:pointer;" src="simg/share_email.png" onclick="shareEmail();">
+				<img style="height:25px;display:inline-block;margin:0px 10px;cursor:pointer;" src="simg/share_facebook.png" onclick="shareFacebook();">
+				<img style="height:25px;display:inline-block;margin:0px 10px;cursor:pointer;" src="simg/share_twitter.png" onclick="shareTwitter();">
+				<img style="height:25px;display:inline-block;margin:0px 10px;cursor:pointer;" src="simg/share_pinterest.png" onclick="sharePinterest();">
+			</div>
+			<div style="width:100%;font-family:HelveticaNeue;font-size:12px;">
+				#InstaMakeover #VirtualArtist
+			</div>
+		</div>
+		<div class="close_popup_button" onclick="hide('share');"></div>
+	</div>
+</div>
+<!-- end of share -->
+
+<!-- email sharing popup -->
+<div id="email_popup" style="position:absolute;left:0px;top:0px;width:100%;height:100%;display:none;">
+        <div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;width:100%;top:5%;text-align:center;">
+		<div class="popup_content" style="width:300px;text-align:left;padding:40px 40px;">
+			<div style="font-size:27px;margin-bottom:30px;">EMAIL YOUR PHOTO</div>
+			<div style="font-size:14px;margin-bottom:10px;">EMAIL YOUR PHOTO</div>
+			<form name="emailform" target="dummyframe" action="sendmail.php">
+				<input type="hidden" name="apiserver" value="">
+				<input type="hidden" name="img" value="">
+				<input type="hidden" name="prods" value="">
+<!--
+				<input type="hidden" name="produrllist" value="">
+-->
+				<input type="text" name="addr" size="31" value="" style="border:1px solid black;width:100%;line-height:30px;" onfocus="emailInputFocus()">
+			</form>
+			<div style="margin-top:-10px;color:rgb(200,0,0);height:20px;">
+				<div id="email_error" style="display:none;font-size:13px;">
+					Please Enter a Valid Email Address
+				</div>
+			</div>
+			<div style="margin-top:30px;margin-right:5px;width:110px;height:40px;border:1px solid black;line-height:44px;text-align:center;display:inline-block;cursor:pointer;" onclick="hide('email_popup');">CANCEL</div>
+			<div style="margin-top:30px;width:110px;height:40px;border:1px solid rgb(200,0,0);background:rgb(200,0,0);color:#ffffff;line-height:44px;text-align:center;display:inline-block;font-weight:bold;cursor:pointer;" onclick="sendEmail();">SEND</div>
+		</div>
+		<div id="email_popup_x" class="close_popup_button" onclick="hide('email_popup');"></div>
+	</div>
+</div>
+<!-- end of email sharing popup -->
+
+
+
+<!-- camera detected -->
+<div id="camera_detected" style="left:0px;top:0px;width:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="position:absolute;left:0px;top:20%;width:100%;height:auto;text-align:center;">
+		<div style="display:inline-block;vertical-align:top;width:405px;background:#ffffff;">
+		<div id="txt354" style="padding-left:3%;background:#FFFFFF;font-size:28px;font-family:HelveticaNeue;font-weight:400;text-align:center;line-height:2.5;margin:10px 0px 3px;">
+				Camera Detected!
+			</div>
+			<img src="simg/edit_live_icon.png" style="width:59px;">
+			<div id="txt355" style="font-size:28px;font-family:HelveticaNeue;font-weight:400;margin:19px 50px 4px;">
+				You're good to go!
+			</div>
+			<div id="txt356" style="font-size:16px;font-family:HelveticaNeue;font-weight:400;margin:0px 30px;">
+				Click on "Allow" on the next page for live try-on.
+			</div>
+			<div id="txt357" style="margin:26.2px 100px 32px;width:93.7px;line-height:33.8px;text-transform:uppercase;background:#000000;text-align:center;display:inline-block;color:#FFFFFF;font-size:12px;font-family:HelveticaNeue-Bold;font-weight:700;cursor:pointer;" onclick="hide('camera_detected');toLiveTryon();">
+				GOT IT
+			</div>
+		</div>
+		<div class="close_popup_button" onclick="hide('camera_detected');changeMode('live');"></div>
+	</div>
+</div>
+<!-- end of camera detected -->
+<!-- filters -->
+
+<div id="filters" style="position:absolute;left:0px;top:0px;width:100%;display:none;">
+	<div style="background:#000000;position:fixed;left:0px;top:0px;width:100%;height:100%;opacity:0.48;filter:alpha(opacity=48);"></div>
+	<div style="width:100%;">
+		<div style="position:absolute;left:50%;margin-left:-305px;margin-top:80px;width:610px;height:auto;">
+			<div style="float:left;width:555px;height:auto;background:#FFFFFF;">
+				<div id="eyeshadow_filter_popup_title_text" class="filter_popup_title" style="text-transform:uppercase;display:none;"><span id="txt123"></span></div>
+				<div id="lips_filter_popup_title_text" class="filter_popup_title" style="text-transform:uppercase;display:none;"><span id="txt121"></span></div>
+				<div id="lash_filter_popup_title_text" class="filter_popup_title" style="text-transform:uppercase;display:none;"><span id="txt122"></span></div>
+			
+				<div id="lips_numResult" class="filter_popup_result_txt" style="display:none;"> RESULTS</div>
+				<div id="lash_numResult" class="filter_popup_result_txt" style="display:none;"> RESULTS</div>
+				<div id="eyeshadow_numResult" class="filter_popup_result_txt" style="display:none;"> RESULTS</div>
+				
+				<div id="txt127" style="text-transform:uppercase;white-space:nowrap;padding:0px 10px;" class="filter_popup_clearall_x" onclick="clearAllFilters();">
+					CLEAR ALL
+				</div>
+				<hr style="float:left;width:100%;clear:both;margin-top:16px;margin-bottom:0px;height:2px;">	
+				<div id="palette_title" style="float:left;width:100%;height:140px;clear:both;">
+					<div style="float:left;width:152px;height:94px;margin-left:104px;margin-top:27px;text-align:center;">
+						<img id="eyeshadow_palette_palette_img" src="res/eyeshadow_palette_palette_off.png" style="clear:both;margin-bottom:7px;"><br>
+						<div id="eyeshadow_palette_palette" class="large_checkmark_0" 
+							style="margin:0px;float:none;display:inline-block;" 
+							onclick="checkPalette(this.id);"></div>
+						<div style="margin-left:7px;height:20px;font-size:16px;font-family:HelveticaNeue;vertical-align:top;display:inline-block">
+							PALETTES
+						</div>
+					</div>
+					<div style="float:right;width:172px;height:94px;text-align:center;margin-right:94px;margin-top:27px;">
+						<img id="eyeshadow_palette_single_img" src="res/eyeshadow_palette_single_off.png" style="clear:both;margin-bottom:7px;"><br>
+						<div id="eyeshadow_palette_single" class="large_checkmark_0" style="margin:0px;float:none;display:inline-block;" onclick="checkPalette(this.id);"></div>
+						<div id="txt366" style="margin-left:7px;height:20px;font-size:16px;font-family:HelveticaNeue;vertical-align:top;display:inline-block">
+							SINGLE SHADES	
+						</div>
+					</div>
+				</div>
+			
+				<div id="finish_title" class="filter_title"> 
+					<div id="txt181_0" class="filter_title_text" style="text-transform:uppercase;"></div>
+					<div class="filter_arrow" onclick="manFilter('finish_title');"></div>
+				</div>
+				<div id="finish_content" class="filter_content" style="border-width:1px;display:none;">
+					<div id="txt181" class="filter_content_title" style="text-transform:uppercase;"></div>
+					<div class="filter_arrow" onclick="manFilter('finish_content');"></div>
+					<div id="filter_eyeshadow_finish" style="float:left;clear:both;width:60%;"></div>
+					<div id="filter_lips_finish" style="float:left;clear:both;width:60%;"></div>
+				</div>
+
+                        	<div id="category_title" class="filter_title">
+                                	<div id="txt233" style="text-transform:uppercase;" class="filter_title_text"></div>
+                                	<div class="filter_arrow" onclick="manFilter('category_title');"></div>
+                        	</div>
+                        	<div id="category_content" class="filter_content" style="border-width:1px;display:none;">
+                                	<div id="txt233_0" style="text-transform:uppercase;" class="filter_content_title">CATEGORY</div>
+                                	<div class="filter_arrow" onclick="manFilter('category_content');"></div>
+                                	<div id="filter_lips_category" style="float:left;clear:both;width:60%;"></div>
+                        	</div>
+
+				<div id="brand_title" class="filter_title">
+					<div id="txt362" class="filter_title_text">BRAND</div>
+					<div class="filter_arrow" onclick="manFilter('brand_title');"></div>
+				</div>
+				<div id="brand_content" class="filter_content" style="display:none;height:180px;">
+					<div id="txt362_0" class="filter_content_title">BRAND</div>
+					<div class="filter_arrow" onclick="manFilter('brand_content');"></div>
+					<div id="filter_lips_brand" style="float:left;clear:both;width:100%;height:131px;overflow-y:scroll;overflow-x:hidden;"></div>
+					<div id="filter_lash_brand" style="float:left;clear:both;width:100%;height:131px;overflow-y:scroll;overflow-x:hidden;"></div>
+					<div id="filter_eyeshadow_brand" style="float:left;clear:both;width:100%;height:131px;overflow-y:scroll;overflow-x:hidden;"></div>
+				</div>
+	
+				<div id="colorIQ_title" class="filter_title">
+					<div id="txt363" style="text-transform:uppercase;" class="filter_title_text">MY COLOR IQ</div>
+					<div id="lips_myCIQ" class="filter_title_text" style="margin-left:0px;display:none;"></div>
+					<div class="filter_arrow" onclick="manFilter('colorIQ_title');"></div>
+				</div>
+				<div id="colorIQ_content" class="filter_content" style="display:none;">
+					<div id="txt363_0" style="text-transform:uppercase;" class="filter_content_title">MY COLOR IQ</div>
+					<div class="filter_arrow" onclick="manFilter('colorIQ_content');"></div>
+					<div style="float:left;width:100%;height:37px;text-align:center;">
+						<div id="filter_lips_colorIQ" class="small_checkmark_0" onclick="checkColorIQ(this.id);" style="float:none;display:none;"></div>
+                				<input type="text" name="coloriq0" id="ciq0" maxlength="1" class="colorIQinput" 
+							onchange="changeColorIQ(1)" onkeyup="autoFocus(1)" onfocus="cleanInput(0)" class="">
+                				<input type="text" name="coloriq1" id="ciq1" maxlength="1" class="colorIQinput"   
+							onchange="changeColorIQ(2)" onkeyup="autoFocus(2)" onfocus="cleanInput(1)" class="">
+                				<input type="text" name="coloriq2" id="ciq2" maxlength="1" class="colorIQinput"  
+							onchange="changeColorIQ(3)" onkeyup="autoFocus(3)" onfocus="cleanInput(2)" class="">
+                				<input type="text" name="coloriq3" id="ciq3" maxlength="1" class="colorIQinput"  
+							onchange="changeColorIQ(4)" onkeyup="autoFocus(4)" onfocus="cleanInput(3)" class="">
+              				</div>
+					<div id="txt389" style="float:left;width:100%;height:36px;line-height:36px;font-size:14px;font-family:HelveticaNeue;text-align:center;">
+						Filter by Color IQ results
+					</div>
+				</div>
+
+				<div class="filter_title">
+					<div id="txt364" class="filter_title_text">MY FAVORITES</div>
+					<div id="filter_lips_myFavorites" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_lash_myFavorites" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_eyeshadow_myFavorites" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+				</div>
+				<div class="filter_title">
+					<div id="txt99" class="filter_title_text" style="text-transform:uppercase;"></div>
+					<div id="filter_lips_justArrived" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_lash_justArrived" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_eyeshadow_justArrived" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+				</div>
+				<div class="filter_title" style="border-width:1px">
+					<div id="txt100" class="filter_title_text" style="text-transform:uppercase;"></div>
+					<div id="filter_lips_bestSellers" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_lash_bestSellers" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+					<div id="filter_eyeshadow_bestSellers" class="large_checkmark_0" onclick="checkFilter(this.id);"></div>
+				</div>
+	
+				<div style="float:left;height:40px;margin-left:20px;margin-top:20px;margin-bottom:20px;line-height:50px;font-size:10px;cursor:pointer;display:none;" onclick="clearAllFilters();">
+					✕ CLEAR ALL
+				</div>
+
+				<div id="txt242" style="float:right;margin:20px 16px 20px 8px;width:138px;height:38px;background:#000000;border:1px solid black;line-height:38px;font-size:16px;font-weight:bold;font-family:HelveticaNeue-Bold;text-transform:uppercase;color:#FFFFFF;text-align:center;cursor:pointer;" onclick="applyFilters();"></div>
+				<div id="txt243" style="text-transform:uppercase;float:right;margin:20px 0px 20px 0px;width:138px;height:38px;border:1px solid black;line-height:38px;font-size:16px;font-family:HelveticaNeue;font-weight:bold;text-align:center;cursor:pointer;" onclick="hide('filters');"></div>
+			</div>
+			<div style="float:left;width:51px;height:51px;margin-left:4px;background-color:#ffffff;background-image:url(res/x.png);background-size:100% 100%;background-repeat: no-repeat;" onclick="hide('filters');"></div>
+		</div>
+	</div>
+</div>
+
+<div style="position:absolute;left:-1px;top:-1px;width:1px;height:1px;overflow:hidden;display:none;">
+	<iframe id="uploadresult" name="uploadresult" onload="uploadResult();" src=""></iframe>
+	<iframe id="dummyframe" name="dummyframe" onload="" src=""></iframe>
+	<div id="compareFrameSize" class="compare_photo_div"></div>
+</div>    
+
+<div style="position:absolute;left:0px;top:0px;width:0px;height:0px;overflow:hidden;">
+	<div id="posContainer" style="position:absolute;left:0px;top:0px;width:100px;height:100px;">
+		<img id="posImage" style="position:absolute;">
+	</div>
+</div>
+
+<!-- ************* left menu ************* -->
+<div id="leftnav"></div>
+
+<div id="whitelayer" style="position:fixed;width:100%;height:100%;z-index:999999;display:block;">
+<div style="position:fixed;left:0px;top:0px;width:100%;height:100%;background:#fff;opacity:0.5;"></div>
+<img style="position:absolute;top:250px;left:50%;transform:translate(-50%,0%);width:30px;height:auto;" src='res/loader.gif'/>
+</div>
+
+<script type="text/javascript" src="https://sephoravirtualartist.com/tracking.js"></script>
+
+</body>
+</html>
+
