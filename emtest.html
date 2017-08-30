@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./src/js/a.js"></script>
+</head>
+<body>
+	<video id="video" width="0" height="0" autoplay></video>    
+	<canvas id="myCanvas" width="320px" height="240px">myCanvas</canvas>    
+	<canvas id="yourCanvas" width="320px" height="240px">yourCanvas</canvas> 
+	<input type="button" onclick="sendphoto()" value="sendphoto">
+
+	<script type="text/javascript">
+
+	    var myCanvas=document.getElementById("myCanvas");    
+	    var context=myCanvas.getContext('2d');    
+	    var imagewidth=myCanvas.width;  
+	    var imageheight=myCanvas.height;  
+	    var yourCanvas=document.getElementById("yourCanvas");    
+	    var context2=yourCanvas.getContext('2d'); 
+
+		var video = document.getElementById('video');
+	    navigator.myGetUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia;
+	    // Not adding `{ audio: true }` since we only want video now
+	    navigator.myGetUserMedia({ video: true },function(localMediaStream){
+	        /*并不是每个window都有URL对象,要加上浏览器前缀
+	        **video.src=window.URL.createObjectURL(localMediaStream);
+	        * */
+	        window.URL=window.URL||window.webkitURL||window.mozURL||window.msURL;
+	        video.src=window.URL.createObjectURL(localMediaStream);
+	        video.play();
+	    },function(error){});    
+
+		function sendphoto(){
+		    var videoElement = document.getElementById('video');
+		    context.drawImage(videoElement, 0, 0, 320, 240);
+		    imagedata = context.getImageData(0, 0, 320,240);
+
+		    // function station(u32PixelArrayFormat, i32Width, i32Height,ppu8Plane,pi32Pitch)
+		    // { 
+		    // 	this.u32PixelArrayFormat = u32PixelArrayFormat;
+		    // 	this.i32Width = i32Width;
+		    // 	this.i32Height = i32Height;
+		    // 	this.ppu8Plane = ppu8Plane;
+		    // 	this.pi32Pitch = pi32Pitch;
+		    // }
+
+		    //var temp = new station(0x305,320,240,imagedata.data,1280);
+
+		    //var temp = [new Uint32Array([0x305]),new Uint32Array([320]),new Uint32Array([240]),imagedata.data,new Uint32Array([1280])];
+		    //var saveASVLData2SDCardRoot = Module.cwrap('saveASVLData2SDCardRoot', 'array', ['number','number','number','array','number']);
+		    //console.log(new Uint8Array(imagedata.data));
+		    //console.log(saveASVLData2SDCardRoot(0x305,320,240,new Uint8Array(imagedata.data),1280));
+		    
+		    console.log(Module.ccall('saveASVLData2SDCardRoot', 'number', ['array','number'],[new Uint8Array([0x305,320,240,[new Uint8Array(imagedata.data).buffer,0,0,0],[1280,0,0,0]]).buffer,90]));
+		}
+
+    </script> 
+</body>
+</html>

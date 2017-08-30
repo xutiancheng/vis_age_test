@@ -83,6 +83,7 @@
    * @return {boolean} True if the object is a dom node.
    */
   tracking.isNode = function(o) {
+    console.log(o);
     return o.nodeType || this.isWindow(o);
   };
 
@@ -105,6 +106,7 @@
    */
   tracking.one = function(selector, opt_element) {
     if (this.isNode(selector)) {
+      console.log(6666)
       return selector;
     }
     return (opt_element || document).querySelector(selector);
@@ -136,6 +138,7 @@
    */
   tracking.track = function(element, tracker, opt_options) {
     element = tracking.one(element);
+    console.log(element.HAVE_ENOUGH_DATA)
     if (!element) {
       throw new Error('Element not found, try a different element or selector.');
     }
@@ -252,6 +255,7 @@
 
     var requestId;
     var requestAnimationFrame_ = function() {
+
       requestId = window.requestAnimationFrame(function() {
         if (element.readyState === element.HAVE_ENOUGH_DATA) {
           try {

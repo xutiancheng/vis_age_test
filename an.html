@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style type="text/css">
+
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		.shooting-star img {
+		    opacity: 0;
+		    animation-delay: 0;
+		    animation: shooting-star 6s infinite ease-out
+		}
+
+		.shooting-star {
+		    position: absolute;
+		    left: 10%;
+		    top: 10%;
+		    transform: rotate(30deg);
+		    pointer-events: none
+		}
+
+		@keyframes shooting-star {
+		    0% {
+		        opacity: 1;
+		        transform: scale(0) translate3d(0, 0, 0)
+		    }
+
+		    15% {
+		        opacity: 1;
+		    }
+
+		    25% {
+		        opacity: 0;
+		        transform: scale(1) translate3d(180px, 0, 0)
+		    }
+
+		    100% {
+		        opacity: 0;
+		        transform: scale(0) translate3d(0, 0, 0)
+		    }
+		}
+		
+		.content{
+			position: relative;
+			margin: 100px;
+			width: 400px;
+			height: 500px;
+		}
+		
+		body{
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<figure class="shooting-star" style="top: 28%; transform: rotate(0deg);">
+		    <img src="https://githubuniverse.com/assets/img/universe/shapes/shooting-star.svg" alt="shooting star">
+		</figure>
+	</div>
+	<img src="https://githubuniverse.com/assets/img/universe/shapes/shooting-star.svg">
+</body>
+</html>

@@ -18,7 +18,8 @@
 <body>
 	<video id="video" width="0" height="0" autoplay></video>
 
-	<canvas id="canvas"></canvas>
+    <canvas id="canvas" style="display:none"></canvas>
+    <canvas id="show-canvas" ></canvas>
 
     <script  src="./src/js/build/tracking-min.js"></script>
     <script  src="./src/js/build/data/eye-min.js"></script>
@@ -46,6 +47,15 @@
 
 	var context1 = canvasObj.getContext('2d');
 
+    var showCanvas = document.getElementById('show-canvas');
+
+        showCanvas.width = 1000;
+        showCanvas.height = 400;
+
+    var context2 = showCanvas.getContext('2d');
+
+
+    var imgData=context2.createImageData(320,240);
     // context1.lineWidth = 4;
     // context1.strokeStyle = '#ff0000';
 
@@ -60,7 +70,7 @@
     //document.getElementById('snap').onclick = scamera;
 
     setInterval(function(){scamera();},100)
-
+    
     function scamera() {
 
         var videoElement = document.getElementById('video');
@@ -68,14 +78,29 @@
         // var context1 = canvasObj.getContext('2d');
         //context1.fillStyle = "#ffffff";
         //context1.fillRect(0, 0, 320, 240);
-        context1.fillStyle="#ffffff";  
-        context1.beginPath();  
-        context1.fillRect(0,0,1000,400);  
-        context1.closePath();  
+        // context1.fillStyle="#ffffff";  
+        // context1.beginPath();  
+        // context1.fillRect(0,0,1000,400);  
+        // context1.closePath();  
         //context1.globalCompositeOperation="destination-over";
         context1.drawImage(videoElement, 0, 0, 320, 240);
 
-                load();
+         var data = context1.getImageData(0, 0, 320, 240).data;
+         
+            for(var i = 0; i < data.length; i += 4) {
+                imgData.data[i]=data[i];
+                imgData.data[i+1]=data[i+1];
+                imgData.data[i+2]=data[i+2];
+                imgData.data[i+3]=data[i+3];
+            }
+
+
+        // context1.fillStyle="#ffffff";  
+        // context1.beginPath();  
+        // context1.fillRect(0,0,320,240);  
+        // context1.closePath(); 
+        context2.putImageData(imgData, 0, 0);
+                //load();
         // document.getElementById("j-img").src = canvasObj.toDataURL();
         //         //alert("PaiZhaoSuccess");
         //     if(document.getElementById("j-img").width){
